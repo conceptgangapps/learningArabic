@@ -1,0 +1,42 @@
+/* Import Google Fonts - must come before Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Base styles */
+:root {
+  --font-english: 'Roboto', sans-serif;
+  --font-arabic: 'Noto Naskh Arabic', serif;
+  --font-bengali: 'Noto Serif Bengali', serif;
+  --font-urdu: 'Noto Nastaliq Urdu', serif;
+}
+
+body {
+  font-family: var(--font-english);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Arabic text styling */
+.arabic-text {
+  font-family: var(--font-arabic);
+  direction: rtl;
+}
+
+/* Bengali text styling */
+.bengali-text {
+  font-family: var(--font-bengali);
+}
+
+/* Urdu text styling */
+.urdu-text {
+  font-family: var(--font-urdu);
+  direction: rtl;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
