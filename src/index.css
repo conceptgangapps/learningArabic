@@ -47,11 +47,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Better touch targets for mobile */
-@media (max-width: 640px) {
-  button, a {
-    min-height: 44px;
-  }
+/* Hide scrollbar for horizontal scroll areas */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
 /* Improve text readability on small screens */
