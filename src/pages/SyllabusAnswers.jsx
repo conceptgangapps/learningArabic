@@ -220,7 +220,7 @@ const SyllabusAnswers = () => {
 
                       {isExpanded && (
                         <div className="p-4 border-t border-gray-100 bg-gray-50">
-                          <AnswerRenderer answerType={task.answerType} answers={task.answers} />
+                          <AnswerRenderer answerType={task.answerType} answers={task.answers} task={task} />
                         </div>
                       )}
                     </div>
