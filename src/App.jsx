@@ -4,7 +4,7 @@ import SyllabusAnswers from './pages/SyllabusAnswers';
 
 function App() {
   return (
-    <Router basename="/learningArabic">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/syllabus-answers" element={<SyllabusAnswers />} />
@@ -24,7 +24,7 @@ function ComingSoon({ title }) {
         <h1 className="text-2xl font-bold text-gray-800 mb-2">{title}</h1>
         <p className="text-gray-600 mb-6">This feature is coming soon!</p>
         <a
-          href="/learningArabic/"
+          href="/"
           className="inline-block px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors"
         >
           Back to Home
