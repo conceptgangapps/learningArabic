@@ -25,6 +25,161 @@ export const NoteRenderer = ({ answers }) => (
   </div>
 );
 
+// Islamic months answer type
+export const IslamicMonthsRenderer = ({ answers }) => (
+  <div className="space-y-4">
+    {answers.title && (
+      <div className="text-center mb-4">
+        <h3 className="text-xl font-bold text-emerald-800" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.title.ar}</h3>
+        <p className="text-emerald-600">{answers.title.en}</p>
+      </div>
+    )}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {answers.months.map((month, idx) => (
+        <div key={idx} className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-4 shadow-sm">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">{month.number}</span>
+            <span className="text-2xl text-emerald-800 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>{month.ar}</span>
+          </div>
+          <p className="text-emerald-700 font-medium">{month.en}</p>
+          <p className="text-sm text-emerald-600 mt-1 italic">{month.meaning}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+// Arabic numbers answer type
+export const ArabicNumbersRenderer = ({ answers }) => (
+  <div className="space-y-4">
+    {answers.title && (
+      <div className="text-center mb-4">
+        <h3 className="text-xl font-bold text-blue-800" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.title.ar}</h3>
+        <p className="text-blue-600">{answers.title.en}</p>
+      </div>
+    )}
+    <div className="overflow-x-auto">
+      <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm">
+        <thead className="bg-blue-100">
+          <tr>
+            <th className="px-3 py-2 text-center text-blue-800">#</th>
+            <th className="px-3 py-2 text-center text-blue-800">Digit</th>
+            <th className="px-3 py-2 text-right text-blue-800">Arabic</th>
+            <th className="px-3 py-2 text-left text-blue-800">English</th>
+          </tr>
+        </thead>
+        <tbody>
+          {answers.numbers.map((num, idx) => (
+            <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+              <td className="px-3 py-2 text-center text-gray-600">{num.numeral}</td>
+              <td className="px-3 py-2 text-center text-2xl text-blue-600" style={{ fontFamily: 'var(--font-arabic)' }}>{num.digit}</td>
+              <td className="px-3 py-2 text-right text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{num.ar}</td>
+              <td className="px-3 py-2 text-left text-gray-600">{num.en}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+);
+
+// Demonstrative Pronouns renderer (أَسْمَاءُ الْإِشَارَةِ)
+export const DemonstrativePronounsRenderer = ({ answers }) => (
+  <div className="space-y-6">
+    {answers.title && (
+      <div className="text-center mb-4">
+        <h3 className="text-xl font-bold text-purple-800" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.title.ar}</h3>
+        <p className="text-purple-600">{answers.title.en}</p>
+      </div>
+    )}
+    {answers.categories?.map((category, idx) => (
+      <div key={idx} className="bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-4">
+        <div className="text-center mb-4">
+          <h4 className="text-lg font-bold text-purple-800" style={{ fontFamily: 'var(--font-arabic)' }}>{category.type.ar}</h4>
+          <p className="text-purple-600 text-sm">{category.type.en}</p>
+        </div>
+        <div className="space-y-3">
+          {category.examples.map((example, exIdx) => (
+            <div key={exIdx} className="bg-white rounded-lg p-3 border border-purple-100 shadow-sm">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-lg font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  {example.pronoun}
+                </span>
+                <span className="text-purple-700 text-sm">{example.usage}</span>
+              </div>
+              <div className="bg-purple-50 rounded-lg p-3 mb-2">
+                <p className="text-xl text-purple-900 text-right leading-relaxed" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  {example.verse}
+                </p>
+              </div>
+              <p className="text-gray-700 text-sm italic mb-1">{example.translation}</p>
+              <p className="text-purple-600 text-xs" style={{ fontFamily: 'var(--font-arabic)' }}>{example.surah}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+// Dual types answer type (الْمُثَنَّى)
+export const DualTypesRenderer = ({ answers }) => {
+  const renderCategory = (category, colorClass) => {
+    if (!category) return null;
+    return (
+      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+        <div className={`${colorClass} text-white p-4`}>
+          <h4 className="text-xl font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>{category.title.ar}</h4>
+          <p className="text-sm opacity-90">{category.title.en}</p>
+        </div>
+        <div className="divide-y divide-gray-100">
+          {category.examples.map((ex, idx) => (
+            <div key={idx} className="p-4 hover:bg-gray-50">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <span className="text-2xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{ex.ar}</span>
+                <span className="text-gray-600">({ex.en})</span>
+              </div>
+              {ex.verse && ex.verse !== "—" && (
+                <div className="bg-emerald-50 rounded p-2 mb-2">
+                  <p className="text-sm text-emerald-800" style={{ fontFamily: 'var(--font-arabic)' }}>{ex.verse}</p>
+                  <p className="text-xs text-emerald-600">{ex.surah}</p>
+                </div>
+              )}
+              <p className="text-base text-gray-700" style={{ fontFamily: 'var(--font-arabic)' }}>{ex.sentence}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="space-y-6">
+      {answers.introduction && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <p className="text-lg text-blue-800 mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.introduction.ar}</p>
+          <p className="text-sm text-blue-600">{answers.introduction.en}</p>
+        </div>
+      )}
+      {renderCategory(answers.haqiqi, 'bg-violet-600')}
+      {renderCategory(answers.soori, 'bg-teal-600')}
+      {renderCategory(answers.ma3nawi, 'bg-amber-600')}
+    </div>
+  );
+};
+
+// Family vocabulary answer type
+export const FamilyVocabRenderer = ({ answers }) => (
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+    {answers.map((item, idx) => (
+      <div key={idx} className="bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-200 rounded-xl p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+        <p className="text-2xl sm:text-3xl text-rose-800 mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>{item.ar}</p>
+        <p className="text-sm text-rose-600">{item.en}</p>
+      </div>
+    ))}
+  </div>
+);
+
 // Simple table answer type (ar/en pairs)
 export const TableRenderer = ({ answers }) => (
   <div className="overflow-x-auto -mx-3 sm:mx-0 px-3 sm:px-0">
@@ -719,37 +874,79 @@ export const SoundWeakVerbsRenderer = ({ answers }) => {
 };
 
 // Verb table answer type
-export const VerbTableRenderer = ({ answers }) => (
-  <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-    <div className="bg-teal-100 p-4 border-b border-gray-200">
-      <h4 className="text-lg font-bold text-teal-800">
-        <span className="arabic-text text-2xl" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.verb?.ar}</span>
-        <span className="mx-2">-</span>
-        <span>{answers.verb?.en}</span>
-      </h4>
-    </div>
-    <div className="overflow-x-auto">
-      <table className="w-full">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-4 py-3 text-left text-gray-600 font-medium">Pronoun</th>
-            <th className="px-4 py-3 text-right text-gray-600 font-medium" style={{ fontFamily: 'var(--font-arabic)' }}>Form</th>
-            <th className="px-4 py-3 text-left text-gray-600 font-medium">Meaning</th>
-          </tr>
-        </thead>
-        <tbody>
-          {answers.conjugations?.map((conj, idx) => (
-            <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-              <td className="px-4 py-3 text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{conj.pronoun}</td>
-              <td className="px-4 py-3 text-right text-xl text-teal-700" style={{ fontFamily: 'var(--font-arabic)' }}>{conj.form}</td>
-              <td className="px-4 py-3 text-gray-600">{conj.meaning}</td>
+export const VerbTableRenderer = ({ answers }) => {
+  // Handle array format (list of verbs with past/present/imperative)
+  if (Array.isArray(answers)) {
+    return (
+      <div className="overflow-x-auto">
+        <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-teal-100">
+            <tr>
+              <th className="px-3 py-2 text-right text-teal-800" style={{ fontFamily: 'var(--font-arabic)' }}>الْفِعْلُ</th>
+              <th className="px-3 py-2 text-right text-teal-800" style={{ fontFamily: 'var(--font-arabic)' }}>الْمَاضِي</th>
+              <th className="px-3 py-2 text-right text-teal-800" style={{ fontFamily: 'var(--font-arabic)' }}>الْمُضَارِعُ</th>
+              <th className="px-3 py-2 text-right text-teal-800" style={{ fontFamily: 'var(--font-arabic)' }}>الْأَمْرُ</th>
+              <th className="px-3 py-2 text-left text-teal-800">Meaning</th>
+              <th className="px-3 py-2 text-right text-teal-800" style={{ fontFamily: 'var(--font-arabic)' }}>الْآيَةُ</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {answers.map((verb, idx) => (
+              <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td className="px-3 py-2 text-right text-lg font-bold text-teal-700" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.ar}</td>
+                <td className="px-3 py-2 text-right text-teal-600" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.past}</td>
+                <td className="px-3 py-2 text-right text-teal-600" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.present}</td>
+                <td className="px-3 py-2 text-right text-teal-600" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.imperative}</td>
+                <td className="px-3 py-2 text-left text-gray-600">{verb.en}</td>
+                <td className="px-3 py-2 text-right">
+                  {verb.verse && (
+                    <div>
+                      <p className="text-gray-700" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.verse}</p>
+                      <p className="text-xs text-teal-600" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.surah}</p>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+
+  // Original format with verb and conjugations
+  return (
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div className="bg-teal-100 p-4 border-b border-gray-200">
+        <h4 className="text-lg font-bold text-teal-800">
+          <span className="arabic-text text-2xl" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.verb?.ar}</span>
+          <span className="mx-2">-</span>
+          <span>{answers.verb?.en}</span>
+        </h4>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-4 py-3 text-left text-gray-600 font-medium">Pronoun</th>
+              <th className="px-4 py-3 text-right text-gray-600 font-medium" style={{ fontFamily: 'var(--font-arabic)' }}>Form</th>
+              <th className="px-4 py-3 text-left text-gray-600 font-medium">Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            {answers.conjugations?.map((conj, idx) => (
+              <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td className="px-4 py-3 text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{conj.pronoun}</td>
+                <td className="px-4 py-3 text-right text-xl text-teal-700" style={{ fontFamily: 'var(--font-arabic)' }}>{conj.form}</td>
+                <td className="px-4 py-3 text-gray-600">{conj.meaning}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Daily life sentences answer type
 export const DailyLifeSentencesRenderer = ({ answers }) => (
@@ -770,55 +967,148 @@ export const DailyLifeSentencesRenderer = ({ answers }) => (
   </div>
 );
 
-// Ordinal numbers answer type
-export const OrdinalNumbersRenderer = ({ answers }) => (
-  <div className="overflow-x-auto">
-    <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
-      <thead className="bg-blue-100">
-        <tr>
-          <th className="px-4 py-3 text-center text-blue-800 font-medium">#</th>
-          <th className="px-4 py-3 text-left text-blue-800 font-medium">Masculine (مذكر)</th>
-          <th className="px-4 py-3 text-left text-blue-800 font-medium">Feminine (مؤنث)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {answers.map((item, idx) => (
-          <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-            <td className="px-4 py-3 text-center font-bold text-blue-600">{item.number}</td>
-            <td className="px-4 py-3">
-              <span className="text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.masculine.ar}</span>
-              <span className="text-gray-500 ml-2">({item.masculine.en})</span>
-            </td>
-            <td className="px-4 py-3">
-              <span className="text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.feminine.ar}</span>
-              <span className="text-gray-500 ml-2">({item.feminine.en})</span>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+// Ordinal numbers answer type (supports both formats)
+export const OrdinalNumbersRenderer = ({ answers }) => {
+  if (!Array.isArray(answers)) return null;
 
-// Interrogative sentences answer type
-export const InterrogativeSentencesRenderer = ({ answers }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-    {answers.map((item, idx) => (
-      <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-        <div className="bg-cyan-100 p-2.5 sm:p-3 border-b border-gray-200">
-          <span className="text-lg sm:text-xl text-cyan-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.question.ar}</span>
-          <span className="mx-1 sm:mx-2 text-gray-400">-</span>
-          <span className="text-cyan-700 text-sm sm:text-base">{item.question.en}</span>
-        </div>
-        <div className="p-3 sm:p-4">
-          <p className="text-xs sm:text-sm text-gray-500 mb-1">Example:</p>
-          <p className="text-base sm:text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.example.ar}</p>
-          <p className="text-gray-600 text-xs sm:text-base">{item.example.en}</p>
-        </div>
+  // Check if using new format (num, masc_ord, fem_ord, masc_example, fem_example)
+  const isNewFormat = answers[0] && 'num' in answers[0];
+
+  if (isNewFormat) {
+    return (
+      <div className="overflow-x-auto">
+        <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden text-sm">
+          <thead className="bg-blue-100">
+            <tr>
+              <th className="px-2 py-2 text-center text-blue-800 font-medium">#</th>
+              <th className="px-2 py-2 text-left text-blue-800 font-medium">Ordinal (M)</th>
+              <th className="px-2 py-2 text-left text-blue-800 font-medium">Example (M)</th>
+              <th className="px-2 py-2 text-left text-blue-800 font-medium">Ordinal (F)</th>
+              <th className="px-2 py-2 text-left text-blue-800 font-medium">Example (F)</th>
+              <th className="px-2 py-2 text-left text-blue-800 font-medium">English</th>
+            </tr>
+          </thead>
+          <tbody>
+            {answers.map((item, idx) => (
+              <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td className="px-2 py-2 text-center font-bold text-blue-600" style={{ fontFamily: 'var(--font-arabic)' }}>{item.num}</td>
+                <td className="px-2 py-2">
+                  <span className="text-base text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.masc_ord}</span>
+                </td>
+                <td className="px-2 py-2">
+                  <span className="text-base text-emerald-700" style={{ fontFamily: 'var(--font-arabic)' }}>{item.masc_example}</span>
+                </td>
+                <td className="px-2 py-2">
+                  <span className="text-base text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.fem_ord}</span>
+                </td>
+                <td className="px-2 py-2">
+                  <span className="text-base text-pink-700" style={{ fontFamily: 'var(--font-arabic)' }}>{item.fem_example}</span>
+                </td>
+                <td className="px-2 py-2 text-gray-600">{item.en}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    ))}
-  </div>
-);
+    );
+  }
+
+  // Legacy format
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+        <thead className="bg-blue-100">
+          <tr>
+            <th className="px-4 py-3 text-center text-blue-800 font-medium">#</th>
+            <th className="px-4 py-3 text-left text-blue-800 font-medium">Masculine (مذكر)</th>
+            <th className="px-4 py-3 text-left text-blue-800 font-medium">Feminine (مؤنث)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {answers.map((item, idx) => (
+            <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+              <td className="px-4 py-3 text-center font-bold text-blue-600">{item.number}</td>
+              <td className="px-4 py-3">
+                <span className="text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.masculine?.ar}</span>
+                <span className="text-gray-500 ml-2">({item.masculine?.en})</span>
+              </td>
+              <td className="px-4 py-3">
+                <span className="text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.feminine?.ar}</span>
+                <span className="text-gray-500 ml-2">({item.feminine?.en})</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+// Interrogative sentences answer type (supports both array and categories-based structure)
+export const InterrogativeSentencesRenderer = ({ answers }) => {
+  // Handle categories-based structure (متى/ماذا/أين with questions)
+  if (answers && answers.categories) {
+    return (
+      <div className="space-y-6">
+        {answers.title && (
+          <div className="text-center mb-4">
+            <h3 className="text-xl font-bold text-cyan-800" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.title.ar}</h3>
+            <p className="text-cyan-600">{answers.title.en}</p>
+          </div>
+        )}
+        {answers.categories.map((category, catIdx) => (
+          <div key={catIdx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <div className="bg-cyan-600 text-white p-3">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <span className="text-2xl font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>{category.particle.ar}</span>
+                <span className="text-lg">{category.particle.en}</span>
+              </div>
+              <p className="text-sm mt-1 opacity-90" style={{ fontFamily: 'var(--font-arabic)' }}>{category.pattern.ar}</p>
+              <p className="text-xs opacity-80">{category.pattern.en}</p>
+            </div>
+            <div className="divide-y divide-gray-100">
+              {category.questions.map((q, qIdx) => (
+                <div key={qIdx} className="p-3 hover:bg-gray-50">
+                  <div className="mb-2">
+                    <p className="text-lg text-cyan-800" style={{ fontFamily: 'var(--font-arabic)' }}>{q.q_ar}</p>
+                    <p className="text-sm text-gray-600">{q.q_en}</p>
+                  </div>
+                  <div className="bg-emerald-50 rounded p-2 mt-2">
+                    <p className="text-sm text-gray-500 mb-1">Answer:</p>
+                    <p className="text-base text-emerald-800" style={{ fontFamily: 'var(--font-arabic)' }}>{q.a_ar}</p>
+                    <p className="text-sm text-emerald-600">{q.a_en}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // Handle legacy array-based structure
+  if (!Array.isArray(answers)) return null;
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+      {answers.map((item, idx) => (
+        <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+          <div className="bg-cyan-100 p-2.5 sm:p-3 border-b border-gray-200">
+            <span className="text-lg sm:text-xl text-cyan-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.question.ar}</span>
+            <span className="mx-1 sm:mx-2 text-gray-400">-</span>
+            <span className="text-cyan-700 text-sm sm:text-base">{item.question.en}</span>
+          </div>
+          <div className="p-3 sm:p-4">
+            <p className="text-xs sm:text-sm text-gray-500 mb-1">Example:</p>
+            <p className="text-base sm:text-lg text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{item.example.ar}</p>
+            <p className="text-gray-600 text-xs sm:text-base">{item.example.en}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
 // Grammar review answer type
 export const GrammarReviewRenderer = ({ answers }) => {
@@ -910,36 +1200,104 @@ export const GrammarReviewRenderer = ({ answers }) => {
   );
 };
 
-// Weak verb types answer type
-export const WeakVerbTypesRenderer = ({ answers }) => (
-  <div className="space-y-6">
-    {answers.map((type, idx) => (
-      <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-        <div className="bg-rose-100 p-4 border-b border-gray-200">
-          <h4 className="text-lg font-bold text-rose-800">
-            <span className="arabic-text" style={{ fontFamily: 'var(--font-arabic)' }}>{type.type.ar}</span>
-            <span className="mx-2">-</span>
-            <span>{type.type.en}</span>
-          </h4>
-        </div>
-        <div className="p-4">
-          <div className="bg-gray-50 p-3 rounded-lg mb-4">
-            <p className="text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{type.explanation.ar}</p>
-            <p className="text-gray-600 mt-1">{type.explanation.en}</p>
+// Weak verb types answer type (supports both formats)
+export const WeakVerbTypesRenderer = ({ answers }) => {
+  // Handle new format with title and categories
+  if (answers && answers.categories) {
+    return (
+      <div className="space-y-6">
+        {answers.title && (
+          <div className="text-center mb-4">
+            <h3 className="text-xl font-bold text-rose-800" style={{ fontFamily: 'var(--font-arabic)' }}>{answers.title.ar}</h3>
+            <p className="text-rose-600">{answers.title.en}</p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {type.examples.map((ex, exIdx) => (
-              <div key={exIdx} className="bg-rose-50 px-4 py-2 rounded-lg">
-                <span className="text-xl text-rose-700" style={{ fontFamily: 'var(--font-arabic)' }}>{ex.ar}</span>
-                <span className="text-gray-500 ml-2">({ex.en})</span>
+        )}
+        {answers.categories.map((category, idx) => (
+          <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <div className="bg-rose-600 text-white p-4">
+              <h4 className="text-lg font-bold">
+                <span style={{ fontFamily: 'var(--font-arabic)' }}>{category.type.ar}</span>
+                <span className="mx-2">-</span>
+                <span>{category.type.en}</span>
+              </h4>
+              <p className="text-sm mt-1 opacity-90" style={{ fontFamily: 'var(--font-arabic)' }}>{category.description.ar}</p>
+              <p className="text-xs opacity-80">{category.description.en}</p>
+              {category.marker && (
+                <div className="mt-2 bg-rose-700 px-3 py-1 rounded inline-block">
+                  <span className="text-sm" style={{ fontFamily: 'var(--font-arabic)' }}>{category.marker.ar}</span>
+                  <span className="mx-1">-</span>
+                  <span className="text-xs">{category.marker.en}</span>
+                </div>
+              )}
+            </div>
+            <div className="p-4">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-3 py-2 text-right">Past</th>
+                      <th className="px-3 py-2 text-right">Present</th>
+                      <th className="px-3 py-2 text-left">English</th>
+                      <th className="px-3 py-2 text-center">Root</th>
+                      <th className="px-3 py-2 text-right">Quranic Example</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {category.verbs.map((verb, vIdx) => (
+                      <tr key={vIdx} className={vIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td className="px-3 py-2 text-lg text-rose-700" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.ar}</td>
+                        <td className="px-3 py-2 text-lg text-emerald-700" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.present}</td>
+                        <td className="px-3 py-2 text-gray-700">{verb.en}</td>
+                        <td className="px-3 py-2 text-center text-gray-500" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.root}</td>
+                        <td className="px-3 py-2">
+                          <p className="text-sm text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{verb.verse}</p>
+                          <p className="text-xs text-gray-500">{verb.surah}</p>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // Handle legacy array format
+  if (!Array.isArray(answers)) return null;
+
+  return (
+    <div className="space-y-6">
+      {answers.map((type, idx) => (
+        <div key={idx} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+          <div className="bg-rose-100 p-4 border-b border-gray-200">
+            <h4 className="text-lg font-bold text-rose-800">
+              <span className="arabic-text" style={{ fontFamily: 'var(--font-arabic)' }}>{type.type?.ar}</span>
+              <span className="mx-2">-</span>
+              <span>{type.type?.en}</span>
+            </h4>
+          </div>
+          <div className="p-4">
+            <div className="bg-gray-50 p-3 rounded-lg mb-4">
+              <p className="text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>{type.explanation?.ar}</p>
+              <p className="text-gray-600 mt-1">{type.explanation?.en}</p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {type.examples?.map((ex, exIdx) => (
+                <div key={exIdx} className="bg-rose-50 px-4 py-2 rounded-lg">
+                  <span className="text-xl text-rose-700" style={{ fontFamily: 'var(--font-arabic)' }}>{ex.ar}</span>
+                  <span className="text-gray-500 ml-2">({ex.en})</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-);
+      ))}
+    </div>
+  );
+};
 
 // Mithal Wawi verbs answer type
 export const MithalWawiVerbsRenderer = ({ answers }) => (
@@ -1444,6 +1802,16 @@ export const AnswerRenderer = ({ answerType, answers, task }) => {
   switch (answerType) {
     case 'note':
       return <NoteRenderer answers={answers} />;
+    case 'familyVocab':
+      return <FamilyVocabRenderer answers={answers} />;
+    case 'dualTypes':
+      return <DualTypesRenderer answers={answers} />;
+    case 'islamicMonths':
+      return <IslamicMonthsRenderer answers={answers} />;
+    case 'arabicNumbers':
+      return <ArabicNumbersRenderer answers={answers} />;
+    case 'demonstrativePronouns':
+      return <DemonstrativePronounsRenderer answers={answers} />;
     case 'table':
       return <TableRenderer answers={answers} />;
     case 'table3col':

@@ -1543,14 +1543,14 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "قِرَاءَةُ الْحِوَارَاتِ وَالِاسْتِمَاعُ إِلَيْهَا.",
-                "en": "Read dialogues and listen to them."
+                "ar": "قِرَاءَةُ الْحِوَارِ الْأَوَّلِ وَالثَّانِي مِنَ الْوَحْدَةِ الثَّانِيَةِ (الْأُسْرَةُ) وَالِاسْتِمَاعُ إِلَيْهِمَا بِعِنَايَةٍ.",
+                "en": "Read Dialogues 1 & 2 from Unit 2 (Family) and listen carefully."
               },
               "answerType": "note",
               "answers": [
                 {
-                  "ar": "يَتَطَلَّبُ قِرَاءَةَ الْحِوَارَاتِ وَالِاسْتِمَاعَ.",
-                  "en": "Requires reading and listening."
+                  "ar": "مَلْحُوظَةٌ: هٰذَا الْوَاجِبُ يَتَطَلَّبُ قِرَاءَةَ الْحِوَارَيْنِ مِنَ الْوَحْدَةِ الثَّانِيَةِ (الْأُسْرَةُ) وَالِاسْتِمَاعَ إِلَى التَّسْجِيلَاتِ الصَّوْتِيَّةِ.",
+                  "en": "Note: This homework requires reading the two dialogues from Unit 2 (Family) and listening to audio recordings."
                 }
               ]
             }
@@ -1566,30 +1566,124 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "تَكْوِينُ الْجُمَلِ عَلَى التَّرَاكِيبِ الْمَدْرُوسَةِ.",
-                "en": "Form sentences using studied structures."
+                "ar": "حِفْظُ أَلْقَابِ الْأُسْرَةِ: أَخٌ، أَبٌ، جَدٌّ، جَدَّةٌ، أُمٌّ، أُخْتٌ.",
+                "en": "Memorize family titles: brother, father, grandfather, grandmother, mother, sister."
+              },
+              "answerType": "familyVocab",
+              "answers": [
+                {
+                  "ar": "أَخٌ",
+                  "en": "brother"
+                },
+                {
+                  "ar": "أَبٌ",
+                  "en": "father"
+                },
+                {
+                  "ar": "جَدٌّ",
+                  "en": "grandfather"
+                },
+                {
+                  "ar": "جَدَّةٌ",
+                  "en": "grandmother"
+                },
+                {
+                  "ar": "أُمٌّ",
+                  "en": "mother"
+                },
+                {
+                  "ar": "أُخْتٌ",
+                  "en": "sister"
+                }
+              ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "تَكْوِينُ أَسْئِلَةٍ: مَنْ (الِاسْتِفْهَامِيَّةُ) + هٰذَا/هٰذِهِ؟ (خَمْسُ جُمَلٍ)",
+                "en": "Form questions: Who (interrogative) + this? (Five sentences)"
               },
               "answerType": "table",
               "answers": [
                 {
-                  "ar": "هٰذَا كِتَابِي الْجَدِيدُ.",
-                  "en": "This is my new book."
+                  "ar": "مَنْ هٰذَا؟",
+                  "en": "Who is this? (m)"
                 },
                 {
-                  "ar": "أَيْنَ الْمَسْجِدُ؟",
-                  "en": "Where is the mosque?"
+                  "ar": "مَنْ هٰذِهِ؟",
+                  "en": "Who is this? (f)"
                 },
                 {
-                  "ar": "هَلْ أَنْتَ طَالِبٌ؟",
-                  "en": "Are you a student?"
+                  "ar": "مَنْ هٰذَا الرَّجُلُ؟",
+                  "en": "Who is this man?"
                 },
                 {
-                  "ar": "أَنَا مُسْلِمٌ مِنْ بَنْغِلَادِيشَ.",
-                  "en": "I am a Muslim from Bangladesh."
+                  "ar": "مَنْ هٰذِهِ الْمَرْأَةُ؟",
+                  "en": "Who is this woman?"
                 },
                 {
-                  "ar": "كَيْفَ حَالُ أُسْرَتِكَ؟",
-                  "en": "How is your family?"
+                  "ar": "مَنْ هٰذَا الطِّفْلُ؟",
+                  "en": "Who is this child?"
+                }
+              ]
+            },
+            {
+              "taskNumber": 3,
+              "task": {
+                "ar": "الْإِجَابَاتُ: هٰذَا + اسْمٌ مَعَ يَاءِ الْمُتَكَلِّمِ (خَمْسُ جُمَلٍ)",
+                "en": "Answers: This + noun with possessive ya (Five sentences)"
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "هٰذَا أَبِي.",
+                  "en": "This is my father."
+                },
+                {
+                  "ar": "هٰذَا أَخِي.",
+                  "en": "This is my brother."
+                },
+                {
+                  "ar": "هٰذَا جَدِّي.",
+                  "en": "This is my grandfather."
+                },
+                {
+                  "ar": "هٰذِهِ أُمِّي.",
+                  "en": "This is my mother."
+                },
+                {
+                  "ar": "هٰذِهِ جَدَّتِي.",
+                  "en": "This is my grandmother."
+                }
+              ]
+            },
+            {
+              "taskNumber": 4,
+              "task": {
+                "ar": "هٰذَا/هٰذِهِ + الْإِضَافَةُ إِلَى يَاءِ الْمُتَكَلِّمِ (خَمْسُ جُمَلٍ)",
+                "en": "This + possessive construction with ya (Five sentences)"
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "هٰذَا أَخِي.",
+                  "en": "This is my brother."
+                },
+                {
+                  "ar": "هٰذِهِ أُخْتِي.",
+                  "en": "This is my sister."
+                },
+                {
+                  "ar": "هٰذَا أَبِي.",
+                  "en": "This is my father."
+                },
+                {
+                  "ar": "هٰذِهِ أُمِّي.",
+                  "en": "This is my mother."
+                },
+                {
+                  "ar": "هٰذِهِ جَدَّتِي.",
+                  "en": "This is my grandmother."
                 }
               ]
             }
@@ -1605,14 +1699,86 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "التَّرَاكِيبُ النَّحْوِيَّةُ بِجَمِيعِ التَّدْرِيبَاتِ.",
-                "en": "Grammatical structures with all exercises."
+                "ar": "حِفْظُ أَلْقَابِ الْأُسْرَةِ: عَمٌّ، عَمَّةٌ، اِبْنٌ، اِبْنَةٌ.",
+                "en": "Memorize family titles: paternal uncle, paternal aunt, son, daughter."
               },
-              "answerType": "note",
+              "answerType": "familyVocab",
               "answers": [
                 {
-                  "ar": "تَدْرِيبَاتُ الْكِتَابِ مَعَ التَّطْبِيقِ الْعَمَلِيِّ.",
-                  "en": "Textbook exercises with practical application."
+                  "ar": "عَمٌّ",
+                  "en": "paternal uncle"
+                },
+                {
+                  "ar": "عَمَّةٌ",
+                  "en": "paternal aunt"
+                },
+                {
+                  "ar": "اِبْنٌ",
+                  "en": "son"
+                },
+                {
+                  "ar": "اِبْنَةٌ",
+                  "en": "daughter"
+                }
+              ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "هٰذَا/هٰذِهِ + اسْمٌ مُضَافٌ إِلَى يَاءِ الْمُتَكَلِّمِ + اسْمُ عَلَمٍ (خَمْسُ جُمَلٍ)",
+                "en": "This + noun with possessive ya + proper noun (Five sentences)"
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "هٰذَا أَخِي مُحَمَّدٌ.",
+                  "en": "This is my brother Muhammad."
+                },
+                {
+                  "ar": "هٰذِهِ أُخْتِي فَاطِمَةُ.",
+                  "en": "This is my sister Fatimah."
+                },
+                {
+                  "ar": "هٰذَا عَمِّي إِبْرَاهِيمُ.",
+                  "en": "This is my uncle Ibrahim."
+                },
+                {
+                  "ar": "هٰذِهِ عَمَّتِي خَدِيجَةُ.",
+                  "en": "This is my aunt Khadijah."
+                },
+                {
+                  "ar": "هٰذَا اِبْنِي أَحْمَدُ.",
+                  "en": "This is my son Ahmad."
+                }
+              ]
+            },
+            {
+              "taskNumber": 3,
+              "task": {
+                "ar": "اسْتِخْدَامُ خَمْسِ كَلِمَاتٍ فِي جُمَلٍ مُفِيدَةٍ.",
+                "en": "Use 5 words in meaningful sentences."
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "عَمِّي يَسْكُنُ فِي الْمَدِينَةِ.",
+                  "en": "My uncle lives in Madinah."
+                },
+                {
+                  "ar": "عَمَّتِي مُعَلِّمَةٌ فِي الْمَدْرَسَةِ.",
+                  "en": "My aunt is a teacher at the school."
+                },
+                {
+                  "ar": "اِبْنِي طَالِبٌ فِي الْجَامِعَةِ.",
+                  "en": "My son is a student at the university."
+                },
+                {
+                  "ar": "اِبْنَتِي تَقْرَأُ الْقُرْآنَ.",
+                  "en": "My daughter reads the Quran."
+                },
+                {
+                  "ar": "جَدِّي رَجُلٌ صَالِحٌ.",
+                  "en": "My grandfather is a righteous man."
                 }
               ]
             }
@@ -1628,16 +1794,250 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "دِرَاسَةُ الْقَوَاعِدِ الصَّرْفِيَّةِ.",
-                "en": "Study morphological rules."
+                "ar": "تَمْيِيزُ أَنْوَاعِ الْمُثَنَّى (الْحَقِيقِيُّ، الصُّورِيُّ، الْمَعْنَوِيُّ) فِي الْآيَاتِ الْقُرْآنِيَّةِ.",
+                "en": "Distinguish dual types (real, formal, semantic) in Quranic verses."
               },
-              "answerType": "note",
-              "answers": [
-                {
-                  "ar": "دِرَاسَةُ الْقَوَاعِدِ مِنَ الْكِتَابِ مَعَ الْأَمْثِلَةِ الْقُرْآنِيَّةِ.",
-                  "en": "Study rules from the book with Quranic examples."
+              "answerType": "dualTypes",
+              "answers": {
+                "introduction": {
+                  "ar": "الْمُثَنَّى ثَلَاثَةُ أَنْوَاعٍ: الْحَقِيقِيُّ (اثْنَانِ مِنْ جِنْسٍ وَاحِدٍ)، الصُّورِيُّ (كَلِمَةٌ وَاحِدَةٌ بِصِيغَةِ الْمُثَنَّى)، الْمَعْنَوِيُّ (اثْنَانِ مُخْتَلِفَانِ مُعَامَلَانِ كَمُثَنَّى).",
+                  "en": "The dual has three types: Real (two of the same kind), Formal (one word in dual form), Semantic (two different things treated as dual)."
+                },
+                "haqiqi": {
+                  "title": {
+                    "ar": "الْمُثَنَّى الْحَقِيقِيُّ",
+                    "en": "Real Dual"
+                  },
+                  "examples": [
+                    {
+                      "ar": "الْوَالِدَانِ",
+                      "en": "the two parents",
+                      "verse": "وَوَصَّيْنَا الْإِنْسَانَ بِوَالِدَيْهِ حُسْنًا",
+                      "surah": "الْعَنْكَبُوتُ: ٨",
+                      "sentence": "الْوَالِدَانِ يُحِبَّانِ أَوْلَادَهُمَا."
+                    },
+                    {
+                      "ar": "الْأَخَوَانِ",
+                      "en": "the two brothers",
+                      "verse": "فَأَصْلِحُوا بَيْنَ أَخَوَيْكُمْ",
+                      "surah": "الْحُجُرَاتُ: ١٠",
+                      "sentence": "الْأَخَوَانِ يَلْعَبَانِ فِي الْحَدِيقَةِ."
+                    },
+                    {
+                      "ar": "الْعَيْنَانِ",
+                      "en": "the two eyes",
+                      "verse": "أَلَمْ نَجْعَلْ لَهُ عَيْنَيْنِ",
+                      "surah": "الْبَلَدُ: ٨",
+                      "sentence": "الْعَيْنَانِ نِعْمَتَانِ عَظِيمَتَانِ."
+                    },
+                    {
+                      "ar": "الْيَدَانِ",
+                      "en": "the two hands",
+                      "verse": "بَلْ يَدَاهُ مَبْسُوطَتَانِ",
+                      "surah": "الْمَائِدَةُ: ٦٤",
+                      "sentence": "الْيَدَانِ مَخْلُوقَتَانِ لِلْعَمَلِ."
+                    },
+                    {
+                      "ar": "الرَّجُلَانِ",
+                      "en": "the two men",
+                      "verse": "قَالَ رَجُلَانِ مِنَ الَّذِينَ يَخَافُونَ",
+                      "surah": "الْمَائِدَةُ: ٢٣",
+                      "sentence": "الرَّجُلَانِ يَمْشِيَانِ إِلَى الْمَسْجِدِ."
+                    },
+                    {
+                      "ar": "الطَّالِبَانِ",
+                      "en": "the two students",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الطَّالِبَانِ يَدْرُسَانِ الْعَرَبِيَّةَ."
+                    },
+                    {
+                      "ar": "الْمُسْلِمَانِ",
+                      "en": "the two Muslims",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْمُسْلِمَانِ يُصَلِّيَانِ الْفَجْرَ."
+                    },
+                    {
+                      "ar": "الْكِتَابَانِ",
+                      "en": "the two books",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْكِتَابَانِ عَلَى الطَّاوِلَةِ."
+                    },
+                    {
+                      "ar": "الْقَلَمَانِ",
+                      "en": "the two pens",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْقَلَمَانِ جَدِيدَانِ."
+                    },
+                    {
+                      "ar": "الْبَيْتَانِ",
+                      "en": "the two houses",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْبَيْتَانِ قَرِيبَانِ مِنَ الْمَسْجِدِ."
+                    }
+                  ]
+                },
+                "soori": {
+                  "title": {
+                    "ar": "الْمُثَنَّى الصُّورِيُّ",
+                    "en": "Formal Dual"
+                  },
+                  "examples": [
+                    {
+                      "ar": "الْقَمَرَيْنِ",
+                      "en": "the two moons (sun and moon)",
+                      "verse": "وَجُمِعَ الشَّمْسُ وَالْقَمَرُ",
+                      "surah": "الْقِيَامَةُ: ٩",
+                      "sentence": "الْقَمَرَانِ آيَتَانِ مِنْ آيَاتِ اللّٰهِ."
+                    },
+                    {
+                      "ar": "الْعُمَرَيْنِ",
+                      "en": "the two Umars (Abu Bakr and Umar)",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْعُمَرَانِ خَلِيفَتَانِ رَاشِدَانِ."
+                    },
+                    {
+                      "ar": "الْأَبَوَيْنِ",
+                      "en": "the two parents (father and mother)",
+                      "verse": "وَلِأَبَوَيْهِ لِكُلِّ وَاحِدٍ مِنْهُمَا السُّدُسُ",
+                      "surah": "النِّسَاءُ: ١١",
+                      "sentence": "الْأَبَوَانِ يَرْعَيَانِ الْأَوْلَادَ."
+                    },
+                    {
+                      "ar": "الْمَشْرِقَيْنِ",
+                      "en": "the two easts",
+                      "verse": "رَبُّ الْمَشْرِقَيْنِ وَرَبُّ الْمَغْرِبَيْنِ",
+                      "surah": "الرَّحْمٰنُ: ١٧",
+                      "sentence": "الْمَشْرِقَانِ وَالْمَغْرِبَانِ لِلّٰهِ."
+                    },
+                    {
+                      "ar": "الْمَغْرِبَيْنِ",
+                      "en": "the two wests",
+                      "verse": "رَبُّ الْمَشْرِقَيْنِ وَرَبُّ الْمَغْرِبَيْنِ",
+                      "surah": "الرَّحْمٰنُ: ١٧",
+                      "sentence": "الْمَغْرِبَانِ تَحْتَ سُلْطَانِ اللّٰهِ."
+                    },
+                    {
+                      "ar": "الثَّقَلَيْنِ",
+                      "en": "the two weighty things (Jinn and humans)",
+                      "verse": "سَنَفْرُغُ لَكُمْ أَيُّهَ الثَّقَلَانِ",
+                      "surah": "الرَّحْمٰنُ: ٣١",
+                      "sentence": "الثَّقَلَانِ هُمَا الْإِنْسُ وَالْجِنُّ."
+                    },
+                    {
+                      "ar": "الْحَسَنَيْنِ",
+                      "en": "the two Hasans (Hasan and Husayn)",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْحَسَنَانِ سِبْطَا رَسُولِ اللّٰهِ ﷺ."
+                    },
+                    {
+                      "ar": "الْخَافِقَيْنِ",
+                      "en": "the two horizons (east and west)",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْخَافِقَانِ مِنْ خَلْقِ اللّٰهِ."
+                    },
+                    {
+                      "ar": "الْعِرَاقَيْنِ",
+                      "en": "the two Iraqs (Basra and Kufa)",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْعِرَاقَانِ مَدِينَتَانِ عَرِيقَتَانِ."
+                    },
+                    {
+                      "ar": "النَّجْدَيْنِ",
+                      "en": "the two highlands (paths of good and evil)",
+                      "verse": "وَهَدَيْنَاهُ النَّجْدَيْنِ",
+                      "surah": "الْبَلَدُ: ١٠",
+                      "sentence": "النَّجْدَانِ طَرِيقُ الْخَيْرِ وَطَرِيقُ الشَّرِّ."
+                    }
+                  ]
+                },
+                "maanawi": {
+                  "title": {
+                    "ar": "الْمُثَنَّى الْمَعْنَوِيُّ",
+                    "en": "Semantic Dual"
+                  },
+                  "examples": [
+                    {
+                      "ar": "الشَّمْسُ وَالْقَمَرُ",
+                      "en": "the sun and the moon",
+                      "verse": "الشَّمْسُ وَالْقَمَرُ بِحُسْبَانٍ",
+                      "surah": "الرَّحْمٰنُ: ٥",
+                      "sentence": "الشَّمْسُ وَالْقَمَرُ آيَتَانِ."
+                    },
+                    {
+                      "ar": "اللَّيْلُ وَالنَّهَارُ",
+                      "en": "the night and the day",
+                      "verse": "وَجَعَلْنَا اللَّيْلَ وَالنَّهَارَ آيَتَيْنِ",
+                      "surah": "الْإِسْرَاءُ: ١٢",
+                      "sentence": "اللَّيْلُ وَالنَّهَارُ يَتَعَاقَبَانِ."
+                    },
+                    {
+                      "ar": "السَّمَاءُ وَالْأَرْضُ",
+                      "en": "the heaven and the earth",
+                      "verse": "خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ",
+                      "surah": "الْأَنْعَامُ: ١",
+                      "sentence": "السَّمَاءُ وَالْأَرْضُ مَخْلُوقَتَانِ."
+                    },
+                    {
+                      "ar": "الْجَنَّةُ وَالنَّارُ",
+                      "en": "Paradise and Hell",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْجَنَّةُ وَالنَّارُ مَخْلُوقَتَانِ."
+                    },
+                    {
+                      "ar": "الْمَاءُ وَالنَّارُ",
+                      "en": "water and fire",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْمَاءُ وَالنَّارُ ضِدَّانِ."
+                    },
+                    {
+                      "ar": "الْأَبُ وَالْأُمُّ",
+                      "en": "the father and the mother",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْأَبُ وَالْأُمُّ يُحِبَّانِ أَوْلَادَهُمَا."
+                    },
+                    {
+                      "ar": "الْحَقُّ وَالْبَاطِلُ",
+                      "en": "truth and falsehood",
+                      "verse": "وَقُلْ جَاءَ الْحَقُّ وَزَهَقَ الْبَاطِلُ",
+                      "surah": "الْإِسْرَاءُ: ٨١",
+                      "sentence": "الْحَقُّ وَالْبَاطِلُ لَا يَجْتَمِعَانِ."
+                    },
+                    {
+                      "ar": "الْخَيْرُ وَالشَّرُّ",
+                      "en": "good and evil",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْخَيْرُ وَالشَّرُّ مُتَضَادَّانِ."
+                    },
+                    {
+                      "ar": "الْعِلْمُ وَالْجَهْلُ",
+                      "en": "knowledge and ignorance",
+                      "verse": "—",
+                      "surah": "—",
+                      "sentence": "الْعِلْمُ وَالْجَهْلُ لَا يَسْتَوِيَانِ."
+                    },
+                    {
+                      "ar": "الْبَرُّ وَالْبَحْرُ",
+                      "en": "the land and the sea",
+                      "verse": "ظَهَرَ الْفَسَادُ فِي الْبَرِّ وَالْبَحْرِ",
+                      "surah": "الرُّومُ: ٤١",
+                      "sentence": "الْبَرُّ وَالْبَحْرُ مِنْ خَلْقِ اللّٰهِ."
+                    }
+                  ]
                 }
-              ]
+              }
             }
           ]
         },
@@ -1651,8 +2051,8 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "اسْتِخْرَاجُ الْأَمْرِ الثُّلَاثِيِّ الْمُجَرَّدِ السَّالِمِ مِنْ سُورَةٍ مِنْ سُوَرِ الْقُرْآنِ الْكَرِيمِ مَعَ التَّرْجَمَةِ.",
-                "en": "Extract sound triliteral imperatives from a Surah of the Holy Quran with translation."
+                "ar": "اسْتِخْرَاجُ الْأَمْرِ الثُّلَاثِيِّ الْمُجَرَّدِ السَّالِمِ مِنَ الْقُرْآنِ الْكَرِيمِ مَعَ التَّرْجَمَةِ.",
+                "en": "Extract sound triliteral imperatives from the Holy Quran with translation."
               },
               "answerType": "imperativeVerbs",
               "answers": [
@@ -1721,28 +2121,28 @@ export const homeworkData = {
                   "surah": "طٰهٰ: ٢٤"
                 },
                 {
-                  "ar": "اِجْلِسْ",
-                  "root": "ج ل س",
-                  "present": "يَجْلِسُ",
-                  "en": "Sit!",
-                  "verse": "—",
-                  "surah": "—"
-                },
-                {
                   "ar": "اِسْمَعْ",
                   "root": "س م ع",
                   "present": "يَسْمَعُ",
                   "en": "Listen!",
-                  "verse": "وَاسْمَعْ وَمَا كَانَ لِمُؤْمِنٍ وَلَا مُؤْمِنَةٍ",
-                  "surah": "الْأَحْزَابُ: ٣٦"
+                  "verse": "فَاسْتَمِعُوا لَهُ وَأَنْصِتُوا",
+                  "surah": "الْأَعْرَافُ: ٢٠٤"
+                },
+                {
+                  "ar": "اُسْجُدْ",
+                  "root": "س ج د",
+                  "present": "يَسْجُدُ",
+                  "en": "Prostrate!",
+                  "verse": "وَاسْجُدْ وَاقْتَرِبْ",
+                  "surah": "الْعَلَقُ: ١٩"
                 }
               ]
             },
             {
               "taskNumber": 2,
               "task": {
-                "ar": "حِفْظُ عِشْرِينَ سُؤَالًا مَعَ أَجْوِبَتِهَا عَنِ التَّعَارُفِ (النَّفْسُ وَالْأُسْرَةُ وَالسَّكَنُ وَالدِّرَاسَةُ).",
-                "en": "Memorize twenty questions with answers about introductions (Self, Family, Residence, and Studies)."
+                "ar": "حِفْظُ عِشْرِينَ سُؤَالًا مَعَ أَجْوِبَتِهَا عَنِ التَّعَارُفِ.",
+                "en": "Memorize twenty questions with answers about introductions."
               },
               "answerType": "qa",
               "answers": [
@@ -1787,6 +2187,18 @@ export const homeworkData = {
                   "a_ar": "نَعَمْ، أَنَا مُسْلِمٌ.",
                   "q_en": "Are you a Muslim?",
                   "a_en": "Yes, I am a Muslim."
+                },
+                {
+                  "q_ar": "مَنْ هٰذَا؟",
+                  "a_ar": "هٰذَا أَبِي.",
+                  "q_en": "Who is this?",
+                  "a_en": "This is my father."
+                },
+                {
+                  "q_ar": "مَنْ هٰذِهِ؟",
+                  "a_ar": "هٰذِهِ أُمِّي.",
+                  "q_en": "Who is this? (f)",
+                  "a_en": "This is my mother."
                 },
                 {
                   "q_ar": "مَا اسْمُ أَبِيكَ؟",
@@ -1837,18 +2249,6 @@ export const homeworkData = {
                   "a_en": "My house is big."
                 },
                 {
-                  "q_ar": "كَمْ غُرْفَةً فِي بَيْتِكَ؟",
-                  "a_ar": "فِي بَيْتِي خَمْسُ غُرَفٍ.",
-                  "q_en": "How many rooms in your house?",
-                  "a_en": "There are five rooms in my house."
-                },
-                {
-                  "q_ar": "هَلْ بَيْتُكَ قَرِيبٌ مِنَ الْمَسْجِدِ؟",
-                  "a_ar": "نَعَمْ، بَيْتِي قَرِيبٌ مِنَ الْمَسْجِدِ.",
-                  "q_en": "Is your house near the mosque?",
-                  "a_en": "Yes, my house is near the mosque."
-                },
-                {
                   "q_ar": "مَاذَا تَدْرُسُ؟",
                   "a_ar": "أَدْرُسُ اللُّغَةَ الْعَرَبِيَّةَ.",
                   "q_en": "What do you study?",
@@ -1862,9 +2262,9 @@ export const homeworkData = {
                 },
                 {
                   "q_ar": "لِمَاذَا تَدْرُسُ الْعَرَبِيَّةَ؟",
-                  "a_ar": "أَدْرُسُهَا لِفَهْمِ الْقُرْآنِ الْكَرِيمِ وَالْأَحَادِيثِ النَّبَوِيَّةِ.",
+                  "a_ar": "أَدْرُسُهَا لِفَهْمِ الْقُرْآنِ الْكَرِيمِ.",
                   "q_en": "Why do you study Arabic?",
-                  "a_en": "I study it to understand the Holy Quran and Prophetic hadiths."
+                  "a_en": "I study it to understand the Holy Quran."
                 }
               ]
             }
@@ -3593,14 +3993,14 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "قِرَاءَةُ الْحِوَارَاتِ وَالِاسْتِمَاعُ إِلَيْهَا.",
-                "en": "Read dialogues and listen to them."
+                "ar": "قِرَاءَةُ الْحِوَارِ الثَّالِثِ مِنَ الْوَحْدَةِ الثَّالِثَةِ وَالِاسْتِمَاعُ إِلَيْهِ بِعِنَايَةٍ.",
+                "en": "Read Dialogue 3 from Unit 3 and listen to it carefully."
               },
               "answerType": "note",
               "answers": [
                 {
-                  "ar": "يَتَطَلَّبُ قِرَاءَةَ الْحِوَارَاتِ وَالِاسْتِمَاعَ.",
-                  "en": "Requires reading and listening."
+                  "ar": "يَتَطَلَّبُ قِرَاءَةَ الْحِوَارِ الثَّالِثِ مِنَ الْوَحْدَةِ الثَّالِثَةِ (السَّكَنِ) وَالِاسْتِمَاعَ إِلَيْهِ بِعِنَايَةٍ. هٰذَا نَشَاطُ مُحَادَثَةٍ حُرَّةٍ.",
+                  "en": "Requires reading Dialogue 3 from Unit 3 (Housing) and listening to it carefully. This is a free conversation activity."
                 }
               ]
             }
@@ -3616,30 +4016,90 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "تَكْوِينُ الْجُمَلِ عَلَى التَّرَاكِيبِ الْمَدْرُوسَةِ.",
-                "en": "Form sentences using studied structures."
+                "ar": "تَكْوِينُ خَمْسِ جُمَلٍ بِالْفِعْلِ الْمُضَارِعِ + الْمَفْعُولِ بِهِ.",
+                "en": "Form 5 sentences with present verb + direct object."
               },
               "answerType": "table",
               "answers": [
                 {
-                  "ar": "هٰذَا كِتَابِي الْجَدِيدُ.",
-                  "en": "This is my new book."
+                  "ar": "يَقْرَأُ الطَّالِبُ الْكِتَابَ.",
+                  "en": "The student reads the book."
                 },
                 {
-                  "ar": "أَيْنَ الْمَسْجِدُ؟",
-                  "en": "Where is the mosque?"
+                  "ar": "تَطْبُخُ الْأُمُّ الطَّعَامَ.",
+                  "en": "The mother cooks the food."
                 },
                 {
-                  "ar": "هَلْ أَنْتَ طَالِبٌ؟",
-                  "en": "Are you a student?"
+                  "ar": "يَكْتُبُ الْمُعَلِّمُ الدَّرْسَ.",
+                  "en": "The teacher writes the lesson."
                 },
                 {
-                  "ar": "أَنَا مُسْلِمٌ مِنْ بَنْغِلَادِيشَ.",
-                  "en": "I am a Muslim from Bangladesh."
+                  "ar": "يَشْرَبُ الْوَلَدُ الْمَاءَ.",
+                  "en": "The boy drinks the water."
                 },
                 {
-                  "ar": "كَيْفَ حَالُ أُسْرَتِكَ؟",
-                  "en": "How is your family?"
+                  "ar": "تَغْسِلُ الْبِنْتُ الثِّيَابَ.",
+                  "en": "The girl washes the clothes."
+                }
+              ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "تَكْوِينُ خَمْسِ جُمَلٍ بِـ «مَاذَا» + الْفِعْلِ الْمُضَارِعِ.",
+                "en": "Form 5 sentences with 'What' (ماذا) + present verb."
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "مَاذَا تَقْرَأُ؟",
+                  "en": "What are you reading?"
+                },
+                {
+                  "ar": "مَاذَا تَأْكُلُ؟",
+                  "en": "What are you eating?"
+                },
+                {
+                  "ar": "مَاذَا تَكْتُبُ؟",
+                  "en": "What are you writing?"
+                },
+                {
+                  "ar": "مَاذَا تَدْرُسُ؟",
+                  "en": "What are you studying?"
+                },
+                {
+                  "ar": "مَاذَا تَشْرَبُ؟",
+                  "en": "What are you drinking?"
+                }
+              ]
+            },
+            {
+              "taskNumber": 3,
+              "task": {
+                "ar": "تَكْوِينُ خَمْسَةِ تَرَاكِيبَ إِضَافِيَّةٍ (مُضَافٌ وَمُضَافٌ إِلَيْهِ).",
+                "en": "Form 5 possessive constructions (Idafa)."
+              },
+              "answerType": "table",
+              "answers": [
+                {
+                  "ar": "غُرْفَةُ الْجُلُوسِ",
+                  "en": "The living room"
+                },
+                {
+                  "ar": "غُرْفَةُ النَّوْمِ",
+                  "en": "The bedroom"
+                },
+                {
+                  "ar": "بَابُ الْبَيْتِ",
+                  "en": "The door of the house"
+                },
+                {
+                  "ar": "مِفْتَاحُ السَّيَّارَةِ",
+                  "en": "The key of the car"
+                },
+                {
+                  "ar": "نَافِذَةُ الْغُرْفَةِ",
+                  "en": "The window of the room"
                 }
               ]
             }
@@ -3655,14 +4115,94 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "التَّرَاكِيبُ النَّحْوِيَّةُ بِجَمِيعِ التَّدْرِيبَاتِ.",
-                "en": "Grammatical structures with all exercises."
+                "ar": "حِفْظُ أَسْمَاءِ الْأَشْهُرِ الْهِجْرِيَّةِ.",
+                "en": "Memorize Islamic (Hijri) month names."
               },
-              "answerType": "note",
+              "answerType": "islamicMonths",
+              "answers": {
+                "title": {
+                  "ar": "الْأَشْهُرُ الْهِجْرِيَّةُ (الْقَمَرِيَّةُ)",
+                  "en": "Islamic (Lunar) Months"
+                },
+                "months": [
+                  { "number": 1, "ar": "مُحَرَّمٌ", "en": "Muharram", "meaning": "Forbidden (sacred month)" },
+                  { "number": 2, "ar": "صَفَرٌ", "en": "Safar", "meaning": "Void/Empty" },
+                  { "number": 3, "ar": "رَبِيعٌ الْأَوَّلُ", "en": "Rabi' al-Awwal", "meaning": "First Spring" },
+                  { "number": 4, "ar": "رَبِيعٌ الثَّانِي", "en": "Rabi' al-Thani", "meaning": "Second Spring" },
+                  { "number": 5, "ar": "جُمَادَى الْأُولَى", "en": "Jumada al-Ula", "meaning": "First Dry Month" },
+                  { "number": 6, "ar": "جُمَادَى الْآخِرَةُ", "en": "Jumada al-Akhirah", "meaning": "Last Dry Month" },
+                  { "number": 7, "ar": "رَجَبٌ", "en": "Rajab", "meaning": "Respected (sacred month)" },
+                  { "number": 8, "ar": "شَعْبَانُ", "en": "Sha'ban", "meaning": "Scattered" },
+                  { "number": 9, "ar": "رَمَضَانُ", "en": "Ramadan", "meaning": "Burning Heat (fasting month)" },
+                  { "number": 10, "ar": "شَوَّالٌ", "en": "Shawwal", "meaning": "Raised (Eid al-Fitr)" },
+                  { "number": 11, "ar": "ذُو الْقَعْدَةِ", "en": "Dhul Qa'dah", "meaning": "Month of Rest (sacred month)" },
+                  { "number": 12, "ar": "ذُو الْحِجَّةِ", "en": "Dhul Hijjah", "meaning": "Month of Hajj (sacred month)" }
+                ]
+              }
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "حِفْظُ الْأَعْدَادِ الْعَرَبِيَّةِ مِنْ ٨١ إِلَى ١٠٠.",
+                "en": "Memorize Arabic numbers from 81 to 100."
+              },
+              "answerType": "arabicNumbers",
+              "answers": {
+                "title": {
+                  "ar": "الْأَعْدَادُ مِنْ ٨١ إِلَى ١٠٠",
+                  "en": "Numbers from 81 to 100"
+                },
+                "numbers": [
+                  { "digit": "٨١", "numeral": 81, "ar": "وَاحِدٌ وَثَمَانُونَ", "en": "Eighty-one" },
+                  { "digit": "٨٢", "numeral": 82, "ar": "اِثْنَانِ وَثَمَانُونَ", "en": "Eighty-two" },
+                  { "digit": "٨٣", "numeral": 83, "ar": "ثَلَاثَةٌ وَثَمَانُونَ", "en": "Eighty-three" },
+                  { "digit": "٨٤", "numeral": 84, "ar": "أَرْبَعَةٌ وَثَمَانُونَ", "en": "Eighty-four" },
+                  { "digit": "٨٥", "numeral": 85, "ar": "خَمْسَةٌ وَثَمَانُونَ", "en": "Eighty-five" },
+                  { "digit": "٨٦", "numeral": 86, "ar": "سِتَّةٌ وَثَمَانُونَ", "en": "Eighty-six" },
+                  { "digit": "٨٧", "numeral": 87, "ar": "سَبْعَةٌ وَثَمَانُونَ", "en": "Eighty-seven" },
+                  { "digit": "٨٨", "numeral": 88, "ar": "ثَمَانِيَةٌ وَثَمَانُونَ", "en": "Eighty-eight" },
+                  { "digit": "٨٩", "numeral": 89, "ar": "تِسْعَةٌ وَثَمَانُونَ", "en": "Eighty-nine" },
+                  { "digit": "٩٠", "numeral": 90, "ar": "تِسْعُونَ", "en": "Ninety" },
+                  { "digit": "٩١", "numeral": 91, "ar": "وَاحِدٌ وَتِسْعُونَ", "en": "Ninety-one" },
+                  { "digit": "٩٢", "numeral": 92, "ar": "اِثْنَانِ وَتِسْعُونَ", "en": "Ninety-two" },
+                  { "digit": "٩٣", "numeral": 93, "ar": "ثَلَاثَةٌ وَتِسْعُونَ", "en": "Ninety-three" },
+                  { "digit": "٩٤", "numeral": 94, "ar": "أَرْبَعَةٌ وَتِسْعُونَ", "en": "Ninety-four" },
+                  { "digit": "٩٥", "numeral": 95, "ar": "خَمْسَةٌ وَتِسْعُونَ", "en": "Ninety-five" },
+                  { "digit": "٩٦", "numeral": 96, "ar": "سِتَّةٌ وَتِسْعُونَ", "en": "Ninety-six" },
+                  { "digit": "٩٧", "numeral": 97, "ar": "سَبْعَةٌ وَتِسْعُونَ", "en": "Ninety-seven" },
+                  { "digit": "٩٨", "numeral": 98, "ar": "ثَمَانِيَةٌ وَتِسْعُونَ", "en": "Ninety-eight" },
+                  { "digit": "٩٩", "numeral": 99, "ar": "تِسْعَةٌ وَتِسْعُونَ", "en": "Ninety-nine" },
+                  { "digit": "١٠٠", "numeral": 100, "ar": "مِائَةٌ", "en": "One hundred" }
+                ]
+              }
+            },
+            {
+              "taskNumber": 3,
+              "task": {
+                "ar": "اِسْتِخْدَامُ خَمْسِ كَلِمَاتٍ جَدِيدَةٍ فِي جُمَلٍ مُفِيدَةٍ.",
+                "en": "Use 5 new words in meaningful sentences."
+              },
+              "answerType": "table",
               "answers": [
                 {
-                  "ar": "تَدْرِيبَاتُ الْكِتَابِ مَعَ التَّطْبِيقِ الْعَمَلِيِّ.",
-                  "en": "Textbook exercises with practical application."
+                  "ar": "السَّكَنُ: أَسْكُنُ فِي شَقَّةٍ جَمِيلَةٍ.",
+                  "en": "Housing: I live in a beautiful apartment."
+                },
+                {
+                  "ar": "الْمَطْبَخُ: الْمَطْبَخُ وَاسِعٌ وَنَظِيفٌ.",
+                  "en": "Kitchen: The kitchen is spacious and clean."
+                },
+                {
+                  "ar": "الْحَمَّامُ: الْحَمَّامُ بِجَانِبِ غُرْفَةِ النَّوْمِ.",
+                  "en": "Bathroom: The bathroom is next to the bedroom."
+                },
+                {
+                  "ar": "الشُّرْفَةُ: أَجْلِسُ فِي الشُّرْفَةِ كُلَّ مَسَاءٍ.",
+                  "en": "Balcony: I sit on the balcony every evening."
+                },
+                {
+                  "ar": "الْإِيجَارُ: إِيجَارُ الشَّقَّةِ مُنَاسِبٌ.",
+                  "en": "Rent: The apartment rent is reasonable."
                 }
               ]
             }
@@ -3678,14 +4218,145 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "دِرَاسَةُ الْقَوَاعِدِ الصَّرْفِيَّةِ.",
-                "en": "Study morphological rules."
+                "ar": "تَمْيِيزُ أَسْمَاءِ الْإِشَارَةِ فِي الْآيَاتِ الْقُرْآنِيَّةِ.",
+                "en": "Distinguish demonstrative pronouns in Quranic verses."
               },
-              "answerType": "note",
+              "answerType": "demonstrativePronouns",
+              "answers": {
+                "title": {
+                  "ar": "أَسْمَاءُ الْإِشَارَةِ فِي الْقُرْآنِ الْكَرِيمِ",
+                  "en": "Demonstrative Pronouns in the Holy Quran"
+                },
+                "categories": [
+                  {
+                    "type": {
+                      "ar": "لِلْقَرِيبِ (هٰذَا/هٰذِهِ)",
+                      "en": "For Near (This)"
+                    },
+                    "examples": [
+                      {
+                        "pronoun": "هٰذَا",
+                        "usage": "Masculine singular (near)",
+                        "verse": "هٰذَا صِرَاطٌ مُسْتَقِيمٌ",
+                        "translation": "This is a straight path",
+                        "surah": "سُورَةُ الْأَنْعَامِ: ١٢٦"
+                      },
+                      {
+                        "pronoun": "هٰذِهِ",
+                        "usage": "Feminine singular (near)",
+                        "verse": "هٰذِهِ جَهَنَّمُ الَّتِي كُنْتُمْ تُوعَدُونَ",
+                        "translation": "This is Hell which you were promised",
+                        "surah": "سُورَةُ يس: ٦٣"
+                      },
+                      {
+                        "pronoun": "هٰذَانِ",
+                        "usage": "Masculine dual (near)",
+                        "verse": "هٰذَانِ خَصْمَانِ اخْتَصَمُوا فِي رَبِّهِمْ",
+                        "translation": "These two are adversaries who disputed about their Lord",
+                        "surah": "سُورَةُ الْحَجِّ: ١٩"
+                      },
+                      {
+                        "pronoun": "هَاتَانِ",
+                        "usage": "Feminine dual (near)",
+                        "verse": "قَالَ إِنِّي أُرِيدُ أَنْ أُنْكِحَكَ إِحْدَى ابْنَتَيَّ هَاتَيْنِ",
+                        "translation": "He said: I wish to marry you to one of these two daughters",
+                        "surah": "سُورَةُ الْقَصَصِ: ٢٧"
+                      },
+                      {
+                        "pronoun": "هٰؤُلَاءِ",
+                        "usage": "Plural (near)",
+                        "verse": "هٰؤُلَاءِ قَوْمُنَا اتَّخَذُوا مِنْ دُونِهِ آلِهَةً",
+                        "translation": "These, our people, have taken gods besides Him",
+                        "surah": "سُورَةُ الْكَهْفِ: ١٥"
+                      }
+                    ]
+                  },
+                  {
+                    "type": {
+                      "ar": "لِلْبَعِيدِ (ذٰلِكَ/تِلْكَ)",
+                      "en": "For Far (That)"
+                    },
+                    "examples": [
+                      {
+                        "pronoun": "ذٰلِكَ",
+                        "usage": "Masculine singular (far)",
+                        "verse": "ذٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+                        "translation": "That is the Book about which there is no doubt",
+                        "surah": "سُورَةُ الْبَقَرَةِ: ٢"
+                      },
+                      {
+                        "pronoun": "تِلْكَ",
+                        "usage": "Feminine singular (far)",
+                        "verse": "تِلْكَ آيَاتُ اللَّهِ نَتْلُوهَا عَلَيْكَ بِالْحَقِّ",
+                        "translation": "These are the verses of Allah which We recite to you in truth",
+                        "surah": "سُورَةُ آلِ عِمْرَانَ: ١٠٨"
+                      },
+                      {
+                        "pronoun": "ذَانِكَ",
+                        "usage": "Masculine dual (far)",
+                        "verse": "فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ",
+                        "translation": "Those are two proofs from your Lord",
+                        "surah": "سُورَةُ الْقَصَصِ: ٣٢"
+                      },
+                      {
+                        "pronoun": "أُولٰئِكَ",
+                        "usage": "Plural (far)",
+                        "verse": "أُولٰئِكَ عَلَى هُدًى مِنْ رَبِّهِمْ",
+                        "translation": "Those are upon guidance from their Lord",
+                        "surah": "سُورَةُ الْبَقَرَةِ: ٥"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "كِتَابَةُ عَشْرِ جُمَلٍ بِاسْتِخْدَامِ أَسْمَاءِ الْإِشَارَةِ.",
+                "en": "Write 10 sentences using demonstrative pronouns."
+              },
+              "answerType": "table",
               "answers": [
                 {
-                  "ar": "دِرَاسَةُ الْقَوَاعِدِ مِنَ الْكِتَابِ مَعَ الْأَمْثِلَةِ الْقُرْآنِيَّةِ.",
-                  "en": "Study rules from the book with Quranic examples."
+                  "ar": "هٰذَا بَيْتٌ كَبِيرٌ.",
+                  "en": "This is a big house."
+                },
+                {
+                  "ar": "هٰذِهِ سَيَّارَةٌ جَدِيدَةٌ.",
+                  "en": "This is a new car."
+                },
+                {
+                  "ar": "ذٰلِكَ الْمَسْجِدُ بَعِيدٌ.",
+                  "en": "That mosque is far."
+                },
+                {
+                  "ar": "تِلْكَ الْمَدْرَسَةُ قَرِيبَةٌ.",
+                  "en": "That school is near."
+                },
+                {
+                  "ar": "هٰذَانِ طَالِبَانِ مُجْتَهِدَانِ.",
+                  "en": "These two are hardworking students."
+                },
+                {
+                  "ar": "هَاتَانِ مُعَلِّمَتَانِ فَاضِلَتَانِ.",
+                  "en": "These two are virtuous female teachers."
+                },
+                {
+                  "ar": "هٰؤُلَاءِ أَصْدِقَائِي.",
+                  "en": "These are my friends."
+                },
+                {
+                  "ar": "أُولٰئِكَ الرِّجَالُ عُلَمَاءُ.",
+                  "en": "Those men are scholars."
+                },
+                {
+                  "ar": "هٰذَا الْكِتَابُ مُفِيدٌ.",
+                  "en": "This book is useful."
+                },
+                {
+                  "ar": "تِلْكَ الْحَدِيقَةُ جَمِيلَةٌ.",
+                  "en": "That garden is beautiful."
                 }
               ]
             }
@@ -6815,14 +7486,14 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "قِرَاءَةُ الْحِوَارَاتِ وَالِاسْتِمَاعُ إِلَيْهَا.",
-                "en": "Read dialogues and listen to them."
+                "ar": "اُكْتُبْ نَصًّا عَنْ فَصْلِكَ.",
+                "en": "Write a text about your classroom."
               },
-              "answerType": "note",
+              "answerType": "paragraph",
               "answers": [
                 {
-                  "ar": "يَتَطَلَّبُ قِرَاءَةَ الْحِوَارَاتِ وَالِاسْتِمَاعَ.",
-                  "en": "Requires reading and listening."
+                  "ar": "فَصْلِي\n\nفَصْلِي وَاسِعٌ وَنَظِيفٌ. فِي الْفَصْلِ سَبُّورَةٌ كَبِيرَةٌ بَيْضَاءُ يَكْتُبُ عَلَيْهَا الْأُسْتَاذُ. وَفِيهِ مَكَاتِبُ وَكَرَاسِيُّ لِلطُّلَّابِ. أَجْلِسُ فِي الصَّفِّ الْأَوَّلِ مَعَ صَدِيقِي مُحَمَّدٍ.\n\nفِي فَصْلِنَا ثَلَاثُونَ طَالِبًا مِنْ بِلَادٍ مُخْتَلِفَةٍ. نَتَعَلَّمُ اللُّغَةَ الْعَرَبِيَّةَ مَعًا. أُسْتَاذُنَا مُخْلِصٌ وَصَبُورٌ، يُعَلِّمُنَا بِأُسْلُوبٍ سَهْلٍ وَمُمْتِعٍ.\n\nعَلَى جُدْرَانِ الْفَصْلِ لَوْحَاتٌ تَعْلِيمِيَّةٌ فِيهَا الْحُرُوفُ الْعَرَبِيَّةُ وَالْقَوَاعِدُ النَّحْوِيَّةُ. وَفِي الزَّاوِيَةِ مَكْتَبَةٌ صَغِيرَةٌ فِيهَا كُتُبٌ عَرَبِيَّةٌ مُفِيدَةٌ.\n\nأُحِبُّ فَصْلِي كَثِيرًا لِأَنَّنِي أَتَعَلَّمُ فِيهِ لُغَةَ الْقُرْآنِ الْكَرِيمِ.",
+                  "en": "My Classroom\n\nMy classroom is spacious and clean. In the classroom there is a large white board on which the teacher writes. There are desks and chairs for students. I sit in the first row with my friend Muhammad.\n\nIn our classroom there are thirty students from different countries. We learn Arabic together. Our teacher is sincere and patient, teaching us in an easy and enjoyable manner.\n\nOn the classroom walls there are educational boards with Arabic letters and grammar rules. In the corner there is a small library with useful Arabic books.\n\nI love my classroom very much because I learn the language of the Noble Quran in it."
                 }
               ]
             }
@@ -6838,30 +7509,74 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "تَكْوِينُ الْجُمَلِ عَلَى التَّرَاكِيبِ الْمَدْرُوسَةِ.",
-                "en": "Form sentences using studied structures."
+                "ar": "اِسْتَخْدِمْ خَمْسَةَ أَفْعَالٍ جَدِيدَةٍ فِي جُمَلٍ مُفِيدَةٍ.",
+                "en": "Use 5 new verbs in meaningful sentences."
               },
-              "answerType": "table",
+              "answerType": "verbSentences",
               "answers": [
                 {
-                  "ar": "هٰذَا كِتَابِي الْجَدِيدُ.",
-                  "en": "This is my new book."
+                  "verb": {
+                    "ar": "يَسْتَيْقِظُ",
+                    "en": "to wake up"
+                  },
+                  "sentence": {
+                    "ar": "يَسْتَيْقِظُ أَخِي قَبْلَ الْفَجْرِ لِيُصَلِّيَ فِي الْمَسْجِدِ.",
+                    "en": "My brother wakes up before dawn to pray in the mosque."
+                  }
                 },
                 {
-                  "ar": "أَيْنَ الْمَسْجِدُ؟",
-                  "en": "Where is the mosque?"
+                  "verb": {
+                    "ar": "يَتَنَاوَلُ",
+                    "en": "to eat/take"
+                  },
+                  "sentence": {
+                    "ar": "نَتَنَاوَلُ الْفُطُورَ مَعًا كُلَّ صَبَاحٍ.",
+                    "en": "We have breakfast together every morning."
+                  }
                 },
                 {
-                  "ar": "هَلْ أَنْتَ طَالِبٌ؟",
-                  "en": "Are you a student?"
+                  "verb": {
+                    "ar": "يُرَاجِعُ",
+                    "en": "to review"
+                  },
+                  "sentence": {
+                    "ar": "يُرَاجِعُ الطَّالِبُ دُرُوسَهُ بَعْدَ صَلَاةِ الْعِشَاءِ.",
+                    "en": "The student reviews his lessons after Isha prayer."
+                  }
                 },
                 {
-                  "ar": "أَنَا مُسْلِمٌ مِنْ بَنْغِلَادِيشَ.",
-                  "en": "I am a Muslim from Bangladesh."
+                  "verb": {
+                    "ar": "يَسْتَرِيحُ",
+                    "en": "to rest"
+                  },
+                  "sentence": {
+                    "ar": "أَسْتَرِيحُ قَلِيلًا بَعْدَ الْعَوْدَةِ مِنَ الْأَكَادِيمِيَّةِ.",
+                    "en": "I rest a little after returning from the academy."
+                  }
                 },
                 {
-                  "ar": "كَيْفَ حَالُ أُسْرَتِكَ؟",
-                  "en": "How is your family?"
+                  "verb": {
+                    "ar": "يُشَارِكُ",
+                    "en": "to participate"
+                  },
+                  "sentence": {
+                    "ar": "يُشَارِكُ الطُّلَّابُ فِي الْأَنْشِطَةِ الثَّقَافِيَّةِ بِحَمَاسٍ.",
+                    "en": "Students participate in cultural activities with enthusiasm."
+                  }
+                }
+              ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "اُكْتُبْ نَصًّا عَنِ الْحَيَاةِ الْيَوْمِيَّةِ.",
+                "en": "Write a text about daily life."
+              },
+              "answerType": "paragraph",
+              "answers": [
+                {
+                  "ar": "حَيَاتِي الْيَوْمِيَّةُ\n\nأَبْدَأُ يَوْمِي بِصَلَاةِ الْفَجْرِ فِي الْمَسْجِدِ. بَعْدَ الصَّلَاةِ أَقْرَأُ الْقُرْآنَ الْكَرِيمَ حَتَّى شُرُوقِ الشَّمْسِ. ثُمَّ أَرْجِعُ إِلَى الْبَيْتِ وَأَتَنَاوَلُ الْفُطُورَ مَعَ أُسْرَتِي.\n\nأَذْهَبُ إِلَى أَكَادِيمِيَّةِ سُورْس كُودْ فِي الثَّامِنَةِ صَبَاحًا. أَدْرُسُ اللُّغَةَ الْعَرَبِيَّةَ وَالنَّحْوَ وَالصَّرْفَ مَعَ زُمَلَائِي. أَسْتَمِعُ إِلَى الْأُسْتَاذِ بِانْتِبَاهٍ وَأَكْتُبُ الْمُلَاحَظَاتِ الْمُهِمَّةَ.\n\nبَعْدَ الظُّهْرِ أَعُودُ إِلَى الْبَيْتِ. أَتَنَاوَلُ الْغَدَاءَ ثُمَّ أَسْتَرِيحُ قَلِيلًا. بَعْدَ ذٰلِكَ أَحُلُّ الْوَاجِبَاتِ الْمَنْزِلِيَّةَ وَأُرَاجِعُ دُرُوسِي.\n\nفِي الْمَسَاءِ أَجْلِسُ مَعَ أُسْرَتِي وَنَتَحَدَّثُ عَنْ أَحْدَاثِ الْيَوْمِ. أُصَلِّي الْعِشَاءَ ثُمَّ أَقْرَأُ أَذْكَارَ النَّوْمِ وَأَنَامُ مُبَكِّرًا.",
+                  "en": "My Daily Life\n\nI start my day with Fajr prayer in the mosque. After prayer, I read the Noble Quran until sunrise. Then I return home and have breakfast with my family.\n\nI go to Source Code Academy at eight in the morning. I study Arabic, grammar, and morphology with my classmates. I listen to the teacher attentively and write important notes.\n\nIn the afternoon, I return home. I have lunch then rest a little. After that, I do homework and review my lessons.\n\nIn the evening, I sit with my family and we talk about the day's events. I pray Isha then recite the sleep adhkar and sleep early."
                 }
               ]
             }
@@ -6877,16 +7592,128 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "التَّرَاكِيبُ النَّحْوِيَّةُ بِجَمِيعِ التَّدْرِيبَاتِ.",
-                "en": "Grammatical structures with all exercises."
+                "ar": "تَدْرِيبُ الْكِتَابَةِ.",
+                "en": "Writing practice."
               },
-              "answerType": "note",
+              "answerType": "paragraph",
               "answers": [
                 {
-                  "ar": "تَدْرِيبَاتُ الْكِتَابِ مَعَ التَّطْبِيقِ الْعَمَلِيِّ.",
-                  "en": "Textbook exercises with practical application."
+                  "ar": "يَوْمٌ فِي الْأَكَادِيمِيَّةِ\n\nوَصَلْتُ إِلَى الْأَكَادِيمِيَّةِ فِي الصَّبَاحِ. دَخَلْتُ الْفَصْلَ وَسَلَّمْتُ عَلَى أَسَاتِذَتِي وَزُمَلَائِي. جَلَسْتُ فِي مَكَانِي وَفَتَحْتُ كُتُبِي. بَدَأَ الدَّرْسُ بِقِرَاءَةِ آيَاتٍ مِنَ الْقُرْآنِ الْكَرِيمِ.\n\nشَرَحَ الْأُسْتَاذُ قَوَاعِدَ جَدِيدَةً وَأَعْطَانَا أَمْثِلَةً كَثِيرَةً. سَأَلْتُهُ عَنْ بَعْضِ النِّقَاطِ وَأَجَابَنِي بِصَبْرٍ. كَتَبْتُ الْمُلَاحَظَاتِ فِي دَفْتَرِي.\n\nفِي الِاسْتِرَاحَةِ تَنَاوَلْتُ الشَّايَ مَعَ أَصْدِقَائِي. تَحَدَّثْنَا بِالْعَرَبِيَّةِ لِنُمَارِسَ الْمُحَادَثَةَ. كَانَ يَوْمًا مُمْتِعًا وَمُفِيدًا.",
+                  "en": "A Day at the Academy\n\nI arrived at the academy in the morning. I entered the classroom and greeted my teachers and classmates. I sat in my place and opened my books. The lesson began with reading verses from the Noble Quran.\n\nThe teacher explained new rules and gave us many examples. I asked him about some points and he answered me patiently. I wrote notes in my notebook.\n\nDuring the break, I had tea with my friends. We spoke in Arabic to practice conversation. It was an enjoyable and beneficial day."
                 }
               ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "أَعِدَّ حِوَارًا.",
+                "en": "Prepare a dialogue."
+              },
+              "answerType": "dialogue",
+              "answers": [
+                {
+                  "speaker": {
+                    "ar": "أَحْمَدُ",
+                    "en": "Ahmad"
+                  },
+                  "text": {
+                    "ar": "السَّلَامُ عَلَيْكُمْ يَا مُحَمَّدُ! كَيْفَ حَالُكَ؟",
+                    "en": "Peace be upon you, Muhammad! How are you?"
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "مُحَمَّدٌ",
+                    "en": "Muhammad"
+                  },
+                  "text": {
+                    "ar": "وَعَلَيْكُمُ السَّلَامُ! أَنَا بِخَيْرٍ وَالْحَمْدُ لِلّٰهِ. وَأَنْتَ؟",
+                    "en": "And upon you peace! I am fine, praise be to Allah. And you?"
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "أَحْمَدُ",
+                    "en": "Ahmad"
+                  },
+                  "text": {
+                    "ar": "بِخَيْرٍ. مَاذَا تَفْعَلُ فِي حَيَاتِكَ الْيَوْمِيَّةِ؟",
+                    "en": "Fine. What do you do in your daily life?"
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "مُحَمَّدٌ",
+                    "en": "Muhammad"
+                  },
+                  "text": {
+                    "ar": "أَسْتَيْقِظُ لِصَلَاةِ الْفَجْرِ ثُمَّ أَذْهَبُ إِلَى الْأَكَادِيمِيَّةِ.",
+                    "en": "I wake up for Fajr prayer then go to the academy."
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "أَحْمَدُ",
+                    "en": "Ahmad"
+                  },
+                  "text": {
+                    "ar": "هٰذَا جَيِّدٌ! وَمَاذَا تَدْرُسُ هُنَاكَ؟",
+                    "en": "That's good! And what do you study there?"
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "مُحَمَّدٌ",
+                    "en": "Muhammad"
+                  },
+                  "text": {
+                    "ar": "أَدْرُسُ اللُّغَةَ الْعَرَبِيَّةَ وَالْقُرْآنَ الْكَرِيمَ.",
+                    "en": "I study Arabic and the Noble Quran."
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "أَحْمَدُ",
+                    "en": "Ahmad"
+                  },
+                  "text": {
+                    "ar": "بَارَكَ اللّٰهُ فِيكَ! أَسْأَلُ اللّٰهَ لَكَ التَّوْفِيقَ.",
+                    "en": "May Allah bless you! I ask Allah to grant you success."
+                  }
+                },
+                {
+                  "speaker": {
+                    "ar": "مُحَمَّدٌ",
+                    "en": "Muhammad"
+                  },
+                  "text": {
+                    "ar": "آمِينَ! وَلَكَ أَيْضًا. إِلَى اللِّقَاءِ!",
+                    "en": "Ameen! And for you too. Goodbye!"
+                  }
+                }
+              ]
+            },
+            {
+              "taskNumber": 3,
+              "task": {
+                "ar": "حَوِّلِ الْفِقْرَةَ: مِنَ الْمُذَكَّرِ إِلَى الْمُؤَنَّثِ، وَمِنَ الْمُضَارِعِ إِلَى الْمَاضِي.",
+                "en": "Convert paragraph: masculine to feminine, present to past."
+              },
+              "answerType": "conversion",
+              "answers": {
+                "original": {
+                  "ar": "يَذْهَبُ الطَّالِبُ إِلَى الْمَدْرَسَةِ. يَدْرُسُ الدُّرُوسَ بِجِدٍّ. يَكْتُبُ الْوَاجِبَاتِ. يَرْجِعُ إِلَى الْبَيْتِ مَسَاءً.",
+                  "en": "The (male) student goes to school. He studies lessons diligently. He writes the assignments. He returns home in the evening."
+                },
+                "masculineToFeminine": {
+                  "ar": "تَذْهَبُ الطَّالِبَةُ إِلَى الْمَدْرَسَةِ. تَدْرُسُ الدُّرُوسَ بِجِدٍّ. تَكْتُبُ الْوَاجِبَاتِ. تَرْجِعُ إِلَى الْبَيْتِ مَسَاءً.",
+                  "en": "The (female) student goes to school. She studies lessons diligently. She writes the assignments. She returns home in the evening."
+                },
+                "presentToPast": {
+                  "ar": "ذَهَبَ الطَّالِبُ إِلَى الْمَدْرَسَةِ. دَرَسَ الدُّرُوسَ بِجِدٍّ. كَتَبَ الْوَاجِبَاتِ. رَجَعَ إِلَى الْبَيْتِ مَسَاءً.",
+                  "en": "The student went to school. He studied lessons diligently. He wrote the assignments. He returned home in the evening."
+                }
+              }
             }
           ]
         },
@@ -6900,14 +7727,240 @@ export const homeworkData = {
             {
               "taskNumber": 1,
               "task": {
-                "ar": "دِرَاسَةُ الْقَوَاعِدِ الصَّرْفِيَّةِ.",
-                "en": "Study morphological rules."
+                "ar": "اِسْتَخْرِجِ الْأَسْمَاءَ الْمَوْصُولَةَ مِنَ الْقُرْآنِ مَعَ التَّمْيِيزِ بَيْنَ الْمُذَكَّرِ وَالْمُؤَنَّثِ وَالْمُفْرَدِ وَالْمُثَنَّى وَالْجَمْعِ.",
+                "en": "Extract relative pronouns from Quran with gender/number distinction."
               },
-              "answerType": "note",
+              "answerType": "relativePronouns",
               "answers": [
                 {
-                  "ar": "دِرَاسَةُ الْقَوَاعِدِ مِنَ الْكِتَابِ مَعَ الْأَمْثِلَةِ الْقُرْآنِيَّةِ.",
-                  "en": "Study rules from the book with Quranic examples."
+                  "pronoun": {
+                    "ar": "الَّذِي",
+                    "en": "who/which (masc. sing.)"
+                  },
+                  "gender": {
+                    "ar": "مُذَكَّرٌ مُفْرَدٌ",
+                    "en": "masculine singular"
+                  },
+                  "verse": {
+                    "ar": "الْحَمْدُ لِلّٰهِ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ",
+                    "en": "Praise be to Allah who created the heavens and the earth"
+                  },
+                  "surah": "الْأَنْعَامُ: ١"
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّتِي",
+                    "en": "who/which (fem. sing.)"
+                  },
+                  "gender": {
+                    "ar": "مُؤَنَّثٌ مُفْرَدٌ",
+                    "en": "feminine singular"
+                  },
+                  "verse": {
+                    "ar": "وَلَا تَقْرَبُوا الشَّجَرَةَ الَّتِي نَهَاكُمَا",
+                    "en": "And do not approach this tree which was forbidden to you"
+                  },
+                  "surah": "الْأَعْرَافُ: ١٩"
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّذَانِ",
+                    "en": "who/which (masc. dual)"
+                  },
+                  "gender": {
+                    "ar": "مُذَكَّرٌ مُثَنًّى",
+                    "en": "masculine dual"
+                  },
+                  "verse": {
+                    "ar": "وَاللَّذَانِ يَأْتِيَانِهَا مِنْكُمْ فَآذُوهُمَا",
+                    "en": "And the two who commit it among you, dishonor them both"
+                  },
+                  "surah": "النِّسَاءُ: ١٦"
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّتَانِ",
+                    "en": "who/which (fem. dual)"
+                  },
+                  "gender": {
+                    "ar": "مُؤَنَّثٌ مُثَنًّى",
+                    "en": "feminine dual"
+                  },
+                  "verse": {
+                    "ar": "فَإِنْ كَانَتَا اثْنَتَيْنِ فَلَهُمَا الثُّلُثَانِ",
+                    "en": "If there are two daughters, they have two-thirds"
+                  },
+                  "surah": "النِّسَاءُ: ١١"
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّذِينَ",
+                    "en": "who/which (masc. pl.)"
+                  },
+                  "gender": {
+                    "ar": "مُذَكَّرٌ جَمْعٌ",
+                    "en": "masculine plural"
+                  },
+                  "verse": {
+                    "ar": "الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+                    "en": "Those who believed and did righteous deeds"
+                  },
+                  "surah": "الْبَقَرَةُ: ٢٥"
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّاتِي",
+                    "en": "who/which (fem. pl.)"
+                  },
+                  "gender": {
+                    "ar": "مُؤَنَّثٌ جَمْعٌ",
+                    "en": "feminine plural"
+                  },
+                  "verse": {
+                    "ar": "وَاللَّاتِي يَأْتِينَ الْفَاحِشَةَ مِنْ نِسَائِكُمْ",
+                    "en": "Those who commit immorality of your women"
+                  },
+                  "surah": "النِّسَاءُ: ١٥"
+                },
+                {
+                  "pronoun": {
+                    "ar": "مَنْ",
+                    "en": "who (for rational beings)"
+                  },
+                  "gender": {
+                    "ar": "لِلْعَاقِلِ",
+                    "en": "for rational beings"
+                  },
+                  "verse": {
+                    "ar": "وَمَنْ يَتَّقِ اللّٰهَ يَجْعَلْ لَهُ مَخْرَجًا",
+                    "en": "And whoever fears Allah, He will make for him a way out"
+                  },
+                  "surah": "الطَّلَاقُ: ٢"
+                },
+                {
+                  "pronoun": {
+                    "ar": "مَا",
+                    "en": "what (for non-rational)"
+                  },
+                  "gender": {
+                    "ar": "لِغَيْرِ الْعَاقِلِ",
+                    "en": "for non-rational"
+                  },
+                  "verse": {
+                    "ar": "وَلِلّٰهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ",
+                    "en": "And to Allah belongs whatever is in the heavens and whatever is on the earth"
+                  },
+                  "surah": "النِّسَاءُ: ١٣١"
+                }
+              ]
+            },
+            {
+              "taskNumber": 2,
+              "task": {
+                "ar": "اُكْتُبْ عَشَرَةَ أَمْثِلَةٍ وَاسْتَخْدِمْهَا فِي جُمَلٍ مُفِيدَةٍ.",
+                "en": "Write 10 examples and use them in meaningful sentences."
+              },
+              "answerType": "relativePronounSentences",
+              "answers": [
+                {
+                  "pronoun": {
+                    "ar": "الَّذِي",
+                    "en": "who (masc.)"
+                  },
+                  "sentence": {
+                    "ar": "الطَّالِبُ الَّذِي يَجْتَهِدُ يَنْجَحُ فِي الِامْتِحَانِ.",
+                    "en": "The student who works hard succeeds in the exam."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّتِي",
+                    "en": "who (fem.)"
+                  },
+                  "sentence": {
+                    "ar": "الْمُعَلِّمَةُ الَّتِي تُدَرِّسُنَا صَبُورَةٌ جِدًّا.",
+                    "en": "The teacher who teaches us is very patient."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّذِي",
+                    "en": "which (masc.)"
+                  },
+                  "sentence": {
+                    "ar": "الْكِتَابُ الَّذِي قَرَأْتُهُ مُفِيدٌ جِدًّا.",
+                    "en": "The book which I read is very useful."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّتِي",
+                    "en": "which (fem.)"
+                  },
+                  "sentence": {
+                    "ar": "الْمَدْرَسَةُ الَّتِي أَدْرُسُ فِيهَا قَرِيبَةٌ مِنْ بَيْتِي.",
+                    "en": "The school in which I study is near my house."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّذَانِ",
+                    "en": "who (masc. dual)"
+                  },
+                  "sentence": {
+                    "ar": "الصَّدِيقَانِ اللَّذَانِ زَارَانِي أَمْسِ مِنْ مِصْرَ.",
+                    "en": "The two friends who visited me yesterday are from Egypt."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّتَانِ",
+                    "en": "who (fem. dual)"
+                  },
+                  "sentence": {
+                    "ar": "الطَّالِبَتَانِ اللَّتَانِ فَازَتَا مُجْتَهِدَتَانِ.",
+                    "en": "The two female students who won are hardworking."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "الَّذِينَ",
+                    "en": "who (masc. pl.)"
+                  },
+                  "sentence": {
+                    "ar": "الْمُسْلِمُونَ الَّذِينَ يُصَلُّونَ فِي الْمَسْجِدِ كَثِيرُونَ.",
+                    "en": "The Muslims who pray in the mosque are many."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "اللَّاتِي",
+                    "en": "who (fem. pl.)"
+                  },
+                  "sentence": {
+                    "ar": "الْمُؤْمِنَاتُ اللَّاتِي يَقْرَأْنَ الْقُرْآنَ مُبَارَكَاتٌ.",
+                    "en": "The believing women who read the Quran are blessed."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "مَنْ",
+                    "en": "who"
+                  },
+                  "sentence": {
+                    "ar": "مَنْ يَزْرَعِ الْخَيْرَ يَحْصُدِ السَّعَادَةَ.",
+                    "en": "Whoever plants good harvests happiness."
+                  }
+                },
+                {
+                  "pronoun": {
+                    "ar": "مَا",
+                    "en": "what"
+                  },
+                  "sentence": {
+                    "ar": "أُحِبُّ مَا يُفِيدُنِي فِي دِينِي وَدُنْيَايَ.",
+                    "en": "I love what benefits me in my religion and worldly life."
+                  }
                 }
               ]
             }
