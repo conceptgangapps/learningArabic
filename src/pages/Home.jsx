@@ -4,14 +4,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const menuItems = [
     {
-      title: { ar: "المنهج", en: "Syllabus" },
-      description: "View the complete Arabic course syllabus",
-      path: "/syllabus",
-      icon: "📚",
-      color: "bg-blue-500 hover:bg-blue-600 active:bg-blue-700",
-      available: false
-    },
-    {
       title: { ar: "حل الواجبات", en: "Syllabus Answers" },
       description: "Homework solutions organized by week and day",
       path: "/syllabus-answers",
@@ -49,6 +41,14 @@ const Home = () => {
       path: "/amr-conjugation",
       icon: "📢",
       color: "bg-orange-500 hover:bg-orange-600 active:bg-orange-700",
+      available: true
+    },
+    {
+      title: { ar: "صِيغَةُ النَّهْيِ", en: "Nahi Conjugation" },
+      description: "Practice prohibition (negative imperative) forms",
+      path: "/nahi-conjugation",
+      icon: "🚫",
+      color: "bg-red-500 hover:bg-red-600 active:bg-red-700",
       available: true
     }
   ];

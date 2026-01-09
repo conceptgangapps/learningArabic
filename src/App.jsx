@@ -5,6 +5,7 @@ import Pronouns from './pages/Pronouns';
 import MadiConjugation from './pages/MadiConjugation';
 import MudariConjugation from './pages/MudariConjugation';
 import AmrConjugation from './pages/AmrConjugation';
+import NahiConjugation from './pages/NahiConjugation';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/madi-conjugation" element={<MadiConjugation />} />
         <Route path="/mudari-conjugation" element={<MudariConjugation />} />
         <Route path="/amr-conjugation" element={<AmrConjugation />} />
+        <Route path="/nahi-conjugation" element={<NahiConjugation />} />
         <Route path="/syllabus" element={<ComingSoon title="Syllabus" />} />
       </Routes>
     </Router>
