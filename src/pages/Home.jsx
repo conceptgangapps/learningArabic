@@ -34,6 +34,14 @@ const Home = () => {
       icon: "📝",
       color: "bg-purple-500 hover:bg-purple-600 active:bg-purple-700",
       available: true
+    },
+    {
+      title: { ar: "تَصْرِيفُ الْمُضَارِعِ", en: "Mudari Conjugation" },
+      description: "Practice present tense verb conjugations",
+      path: "/mudari-conjugation",
+      icon: "🔄",
+      color: "bg-teal-500 hover:bg-teal-600 active:bg-teal-700",
+      available: true
     }
   ];
 
