@@ -4,6 +4,7 @@ import SyllabusAnswers from './pages/SyllabusAnswers';
 import Pronouns from './pages/Pronouns';
 import MadiConjugation from './pages/MadiConjugation';
 import MudariConjugation from './pages/MudariConjugation';
+import AmrConjugation from './pages/AmrConjugation';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/pronouns" element={<Pronouns />} />
         <Route path="/madi-conjugation" element={<MadiConjugation />} />
         <Route path="/mudari-conjugation" element={<MudariConjugation />} />
+        <Route path="/amr-conjugation" element={<AmrConjugation />} />
         <Route path="/syllabus" element={<ComingSoon title="Syllabus" />} />
       </Routes>
     </Router>

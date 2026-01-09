@@ -42,6 +42,14 @@ const Home = () => {
       icon: "🔄",
       color: "bg-teal-500 hover:bg-teal-600 active:bg-teal-700",
       available: true
+    },
+    {
+      title: { ar: "صِيغَةُ الْأَمْرِ", en: "Amr Conjugation" },
+      description: "Practice imperative (command) verb forms",
+      path: "/amr-conjugation",
+      icon: "📢",
+      color: "bg-orange-500 hover:bg-orange-600 active:bg-orange-700",
+      available: true
     }
   ];
 
