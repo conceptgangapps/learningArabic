@@ -20,12 +20,20 @@ const Home = () => {
       available: true
     },
     {
-      title: { ar: "تصريف الماضي", en: "Madi Conjugation" },
+      title: { ar: "الضَّمَائِرُ", en: "Pronouns (Domir)" },
+      description: "Learn Arabic pronouns with Quranic examples",
+      path: "/pronouns",
+      icon: "👤",
+      color: "bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700",
+      available: true
+    },
+    {
+      title: { ar: "تَصْرِيفُ الْمَاضِي", en: "Madi Conjugation" },
       description: "Practice past tense verb conjugations",
       path: "/madi-conjugation",
       icon: "📝",
       color: "bg-purple-500 hover:bg-purple-600 active:bg-purple-700",
-      available: false
+      available: true
     }
   ];
 
