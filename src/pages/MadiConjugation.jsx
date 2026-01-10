@@ -1235,54 +1235,54 @@ const MadiConjugation = () => {
 
       {/* Popup Modal - Educational Breakdown */}
       {showPopup && popupData && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setShowPopup(false)}>
-          <div className="bg-white rounded-2xl max-w-sm w-full overflow-hidden shadow-2xl border border-gray-200" onClick={e => e.stopPropagation()}>
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2 sm:p-4" onClick={() => setShowPopup(false)}>
+          <div className="bg-white rounded-xl sm:rounded-2xl max-w-sm w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-gray-200" onClick={e => e.stopPropagation()}>
             {/* Header - Category */}
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-3 text-center">
-              <p className="text-white text-sm font-medium">
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-3 sm:px-4 py-1.5 sm:py-3 text-center flex-shrink-0">
+              <p className="text-white text-xs sm:text-sm font-medium">
                 {popupData.rowName?.en} {popupData.numberType?.en}
               </p>
             </div>
 
             {/* Main Content */}
-            <div className="p-5 sm:p-6 bg-gradient-to-b from-gray-50 to-white">
+            <div className="p-3 sm:p-6 bg-gradient-to-b from-gray-50 to-white flex-1 overflow-y-auto">
               {/* Pronoun */}
-              <div className="text-center mb-4">
-                <div className="arabic-text text-3xl sm:text-4xl font-bold text-purple-700 mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>
+              <div className="text-center mb-2 sm:mb-4">
+                <div className="arabic-text text-2xl sm:text-4xl font-bold text-purple-700 mb-1 sm:mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>
                   {popupData.pronoun}
                 </div>
-                <span className="inline-block bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full font-medium">
+                <span className="inline-block bg-purple-100 text-purple-700 text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full font-medium">
                   {popupData.meaning}
                 </span>
               </div>
 
               {/* Conjugated Verb */}
-              <div className="text-center mb-6">
-                <div className="arabic-text text-5xl sm:text-6xl font-bold text-rose-600" style={{ fontFamily: 'var(--font-arabic)' }}>
+              <div className="text-center mb-3 sm:mb-6">
+                <div className="arabic-text text-3xl sm:text-6xl font-bold text-rose-600" style={{ fontFamily: 'var(--font-arabic)' }}>
                   {popupData.example}
                 </div>
               </div>
 
               {/* Visual Equation - only show if there's a marker */}
               {popupData.marker !== '—' && (
-                <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 flex-wrap">
+                <div className="flex items-center justify-center gap-1 sm:gap-3 mb-3 sm:mb-6 flex-wrap">
                   {/* Base (main part) */}
-                  <div className="border-2 border-amber-500 bg-amber-50 rounded-lg px-3 sm:px-4 py-2">
-                    <span className="arabic-text text-xl sm:text-2xl text-amber-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <div className="border-2 border-amber-500 bg-amber-50 rounded-lg px-2 sm:px-4 py-1 sm:py-2">
+                    <span className="arabic-text text-base sm:text-2xl text-amber-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
                       {popupData.base}
                     </span>
                   </div>
-                  <span className="text-gray-400 text-xl font-bold">+</span>
+                  <span className="text-gray-400 text-base sm:text-xl font-bold">+</span>
                   {/* Marker (pattern/suffix) */}
-                  <div className="border-2 border-emerald-500 bg-emerald-50 rounded-lg px-3 sm:px-4 py-2">
-                    <span className="arabic-text text-xl sm:text-2xl text-emerald-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <div className="border-2 border-emerald-500 bg-emerald-50 rounded-lg px-2 sm:px-4 py-1 sm:py-2">
+                    <span className="arabic-text text-base sm:text-2xl text-emerald-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
                       {popupData.marker}
                     </span>
                   </div>
-                  <span className="text-gray-400 text-xl font-bold">=</span>
+                  <span className="text-gray-400 text-base sm:text-xl font-bold">=</span>
                   {/* Result (conjugated form) */}
-                  <div className="border-2 border-rose-500 bg-rose-50 rounded-lg px-3 sm:px-4 py-2">
-                    <span className="arabic-text text-xl sm:text-2xl text-rose-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <div className="border-2 border-rose-500 bg-rose-50 rounded-lg px-2 sm:px-4 py-1 sm:py-2">
+                    <span className="arabic-text text-base sm:text-2xl text-rose-700 font-bold" style={{ fontFamily: 'var(--font-arabic)' }}>
                       {popupData.example}
                     </span>
                   </div>
@@ -1290,15 +1290,15 @@ const MadiConjugation = () => {
               )}
 
               {/* Marker Section */}
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-center">
-                <div className="text-emerald-600 text-xs mb-2 font-medium">
+              <div className="bg-emerald-50 border border-emerald-200 rounded-lg sm:rounded-xl p-2 sm:p-4 text-center">
+                <div className="text-emerald-600 text-[10px] sm:text-xs mb-1 sm:mb-2 font-medium">
                   Marker | العَلَامَة
                 </div>
-                <div className="arabic-text text-3xl sm:text-4xl font-bold text-emerald-700" style={{ fontFamily: 'var(--font-arabic)' }}>
+                <div className="arabic-text text-2xl sm:text-4xl font-bold text-emerald-700" style={{ fontFamily: 'var(--font-arabic)' }}>
                   {popupData.marker === '—' ? 'لَا عَلَامَةَ' : popupData.marker}
                 </div>
                 {popupData.marker !== '—' && (
-                  <div className="arabic-text text-sm text-emerald-600 mt-1" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <div className="arabic-text text-xs sm:text-sm text-emerald-600 mt-0.5 sm:mt-1" style={{ fontFamily: 'var(--font-arabic)' }}>
                     {popupData.markerAr}
                   </div>
                 )}
@@ -1306,11 +1306,11 @@ const MadiConjugation = () => {
             </div>
 
             {/* Footer - Explanation */}
-            <div className="bg-gray-100 border-t border-gray-200 px-5 py-4">
-              <p className="arabic-text text-center text-gray-700 text-sm sm:text-base mb-1" style={{ fontFamily: 'var(--font-arabic)' }}>
+            <div className="bg-gray-100 border-t border-gray-200 px-3 sm:px-5 py-2 sm:py-4 flex-shrink-0">
+              <p className="arabic-text text-center text-gray-700 text-[10px] sm:text-base mb-0.5 sm:mb-1" style={{ fontFamily: 'var(--font-arabic)' }}>
                 {popupData.patternAr}
               </p>
-              <p className="text-center text-gray-500 text-xs sm:text-sm">
+              <p className="text-center text-gray-500 text-[10px] sm:text-sm">
                 {popupData.pattern}
               </p>
             </div>
@@ -1318,7 +1318,7 @@ const MadiConjugation = () => {
             {/* Close Button */}
             <button
               onClick={() => setShowPopup(false)}
-              className="w-full py-3 bg-purple-500 text-white font-medium hover:bg-purple-600 transition-colors"
+              className="w-full py-2 sm:py-3 bg-purple-500 text-white text-sm sm:text-base font-medium hover:bg-purple-600 transition-colors flex-shrink-0"
             >
               Got it!
             </button>
