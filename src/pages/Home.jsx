@@ -161,7 +161,10 @@ const Home = () => {
             <div className="space-y-3 text-gray-600 text-sm sm:text-base">
               <div className="flex items-center gap-3">
                 <svg className="w-6 h-6 flex-shrink-0" viewBox="0 0 24 24">
-                  <path fill="#EA4335" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                  <path fill="#4285F4" d="M22 6v12c0 1.1-.9 2-2 2h-1V9.5l-7 4.5-7-4.5V20H4c-1.1 0-2-.9-2-2V6c0-.55.22-1.05.59-1.41C2.95 4.22 3.45 4 4 4h.5l7.5 5 7.5-5h.5c.55 0 1.05.22 1.41.59.37.36.59.86.59 1.41z"/>
+                  <path fill="#EA4335" d="M22 6l-10 6.5L2 6"/>
+                  <path fill="#FBBC05" d="M5 20V9.5l7 4.5"/>
+                  <path fill="#34A853" d="M19 20V9.5l-7 4.5"/>
                 </svg>
                 <a href="mailto:abirhasanzoha@gmail.com" className="text-emerald-600 hover:text-emerald-700 hover:underline">
                   abirhasanzoha@gmail.com
