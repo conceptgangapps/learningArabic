@@ -50,6 +50,14 @@ const Home = () => {
       icon: "🚫",
       color: "bg-red-500 hover:bg-red-600 active:bg-red-700",
       available: true
+    },
+    {
+      title: { ar: "أناشيد عربية", en: "Arabic Rhymes" },
+      description: "Arabic rhymes and lullabies with translations",
+      path: "/rhymes",
+      icon: "🎵",
+      color: "bg-rose-500 hover:bg-rose-600 active:bg-rose-700",
+      available: true
     }
   ];
 
