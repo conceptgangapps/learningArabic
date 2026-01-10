@@ -7,6 +7,7 @@ import MudariConjugation from './pages/MudariConjugation';
 import AmrConjugation from './pages/AmrConjugation';
 import NahiConjugation from './pages/NahiConjugation';
 import Rhymes from './pages/Rhymes';
+import QiratVocabulary from './pages/QiratVocabulary';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/amr-conjugation" element={<AmrConjugation />} />
         <Route path="/nahi-conjugation" element={<NahiConjugation />} />
         <Route path="/rhymes" element={<Rhymes />} />
+        <Route path="/qirat-vocabulary" element={<QiratVocabulary />} />
         <Route path="/syllabus" element={<ComingSoon title="Syllabus" />} />
       </Routes>
     </Router>

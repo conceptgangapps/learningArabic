@@ -58,6 +58,14 @@ const Home = () => {
       icon: "🎵",
       color: "bg-rose-500 hover:bg-rose-600 active:bg-rose-700",
       available: true
+    },
+    {
+      title: { ar: "مفردات قراءة الراشدة", en: "Qirat ar Rashida Vocabulary" },
+      description: "Vocabulary from Qirat ar Rashida with words and verb conjugations",
+      path: "/qirat-vocabulary",
+      icon: "📖",
+      color: "bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700",
+      available: true
     }
   ];
 
@@ -104,10 +112,10 @@ const Home = () => {
                   className={`block ${item.color} text-white rounded-xl p-5 sm:p-6 shadow-lg transform transition-all duration-200 hover:scale-[1.02] sm:hover:scale-105 hover:shadow-xl active:scale-[0.98]`}
                 >
                   <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{item.icon}</div>
-                  <h2 className="arabic-text text-xl sm:text-2xl font-bold mb-1" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <h2 className="arabic-text text-lg sm:text-xl font-bold mb-1 whitespace-nowrap overflow-hidden text-ellipsis" style={{ fontFamily: 'var(--font-arabic)' }}>
                     {item.title.ar}
                   </h2>
-                  <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title.en}</h3>
+                  <h3 className="text-sm sm:text-base font-semibold mb-2 whitespace-nowrap overflow-hidden text-ellipsis">{item.title.en}</h3>
                   <p className="text-white/80 text-xs sm:text-sm">{item.description}</p>
                 </Link>
               ) : (
@@ -116,10 +124,10 @@ const Home = () => {
                     Coming Soon
                   </div>
                   <div className="text-3xl sm:text-4xl mb-3 sm:mb-4 opacity-50">{item.icon}</div>
-                  <h2 className="arabic-text text-xl sm:text-2xl font-bold mb-1 opacity-60" style={{ fontFamily: 'var(--font-arabic)' }}>
+                  <h2 className="arabic-text text-lg sm:text-xl font-bold mb-1 opacity-60 whitespace-nowrap overflow-hidden text-ellipsis" style={{ fontFamily: 'var(--font-arabic)' }}>
                     {item.title.ar}
                   </h2>
-                  <h3 className="text-base sm:text-lg font-semibold mb-2 opacity-60">{item.title.en}</h3>
+                  <h3 className="text-sm sm:text-base font-semibold mb-2 opacity-60 whitespace-nowrap overflow-hidden text-ellipsis">{item.title.en}</h3>
                   <p className="text-gray-400 text-xs sm:text-sm">{item.description}</p>
                 </div>
               )}
