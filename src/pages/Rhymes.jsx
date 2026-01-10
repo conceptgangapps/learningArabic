@@ -252,26 +252,38 @@ const PoemTab = ({ poem, language, getLanguageFont, isRtl }) => {
 
       {/* Lines */}
       <div className="space-y-2">
-        {poem.lines.map((line, idx) => (
-          <div key={idx} className="grid grid-cols-2 gap-4 py-3 border-b border-gray-100 last:border-0">
-            <div
-              className="text-gray-700 leading-relaxed"
-              style={{
-                fontFamily: getLanguageFont(language),
-                direction: isRtl ? 'rtl' : 'ltr',
-                textAlign: isRtl ? 'right' : 'left'
-              }}
-            >
-              {line[language]}
+        {poem.lines.map((line, idx, arr) => {
+          // Check if next line is a section divider (to remove border before divider)
+          const nextLineIsDivider = arr[idx + 1] && !arr[idx + 1].arabic;
+          // Check if previous line is a section divider (to remove border after divider)
+          const prevLineIsDivider = arr[idx - 1] && !arr[idx - 1].arabic;
+
+          // Check if this is a section divider (empty line)
+          return !line.arabic ? (
+            <div key={idx} className="py-2">
+              <div className="h-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent rounded-full"></div>
             </div>
-            <div
-              className="arabic-text text-lg text-gray-800 leading-loose"
-              style={{ fontFamily: 'var(--font-arabic)', direction: 'rtl', textAlign: 'right' }}
-            >
-              {line.arabic}
+          ) : (
+            <div key={idx} className={`grid grid-cols-2 gap-4 py-3 ${!nextLineIsDivider ? 'border-b border-gray-100' : ''}`}>
+              <div
+                className="text-gray-700 leading-relaxed"
+                style={{
+                  fontFamily: getLanguageFont(language),
+                  direction: isRtl ? 'rtl' : 'ltr',
+                  textAlign: isRtl ? 'right' : 'left'
+                }}
+              >
+                {line[language]}
+              </div>
+              <div
+                className="arabic-text text-lg text-gray-800 leading-loose"
+                style={{ fontFamily: 'var(--font-arabic)', direction: 'rtl', textAlign: 'right' }}
+              >
+                {line.arabic}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* YouTube Embed Section */}
@@ -297,7 +309,7 @@ const PoemTab = ({ poem, language, getLanguageFont, isRtl }) => {
             <div className="relative rounded-xl overflow-hidden" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${poem.videoId}?rel=0&modestbranding=1`}
+                src={`https://www.youtube.com/embed/${poem.videoId}?rel=0&modestbranding=1${poem.videoStartTime ? `&start=${poem.videoStartTime}` : ''}`}
                 title={poem.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -331,16 +343,54 @@ const PoemTab = ({ poem, language, getLanguageFont, isRtl }) => {
 
 // Words Tab Component
 const WordsTab = ({ poem, language, getLanguageFont, isRtl }) => {
-  const [expandedLine, setExpandedLine] = useState(0);
+  const [expandedLines, setExpandedLines] = useState(new Set());
+
+  const toggleLine = (idx) => {
+    setExpandedLines(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(idx)) {
+        newSet.delete(idx);
+      } else {
+        newSet.add(idx);
+      }
+      return newSet;
+    });
+  };
+
+  const expandAll = () => {
+    setExpandedLines(new Set(poem.wordAnalysis.map((_, idx) => idx)));
+  };
+
+  const collapseAll = () => {
+    setExpandedLines(new Set());
+  };
 
   return (
     <div className="space-y-3">
+      {/* Expand/Collapse All Buttons */}
+      <div className="flex justify-between mb-4">
+        <button
+          onClick={collapseAll}
+          className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors flex items-center gap-1"
+        >
+          <span>▶</span>
+          <span>{uiLabels.collapseAll || 'Collapse All'}</span>
+        </button>
+        <button
+          onClick={expandAll}
+          className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors flex items-center gap-1"
+        >
+          <span>▼</span>
+          <span>{uiLabels.expandAll || 'Expand All'}</span>
+        </button>
+      </div>
+
       {poem.wordAnalysis.map((analysis, idx) => (
         <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden">
           <button
-            onClick={() => setExpandedLine(expandedLine === idx ? -1 : idx)}
+            onClick={() => toggleLine(idx)}
             className={`w-full px-4 py-3 flex items-center gap-3 transition-colors ${
-              expandedLine === idx
+              expandedLines.has(idx)
                 ? 'bg-rose-500 text-white'
                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
             }`}
@@ -352,10 +402,10 @@ const WordsTab = ({ poem, language, getLanguageFont, isRtl }) => {
             >
               {analysis.line}
             </span>
-            <span className="text-sm">{expandedLine === idx ? '▼' : '▶'}</span>
+            <span className="text-sm">{expandedLines.has(idx) ? '▼' : '▶'}</span>
           </button>
 
-          {expandedLine === idx && (
+          {expandedLines.has(idx) && (
             <div className="p-4 bg-white">
               {/* Table Header */}
               <div className="grid grid-cols-3 gap-3 mb-2 pb-2 border-b border-gray-200 font-semibold text-sm text-gray-600">
