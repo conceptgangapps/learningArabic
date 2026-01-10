@@ -137,14 +137,15 @@ const QiratVocabulary = () => {
 
         {/* Filters Section */}
         <div className="border-b border-gray-200">
-          <div className="max-w-4xl mx-auto px-3 py-2">
+          <div className="max-w-4xl mx-auto px-3 py-2 space-y-2 sm:space-y-0">
+            {/* Mobile: Two rows, Desktop: Single row */}
             <div className="flex items-center justify-between gap-2">
               {/* Left: Filters */}
               <div className="flex items-center gap-2">
                 <select
                   value={selectedChapter}
                   onChange={(e) => setSelectedChapter(e.target.value)}
-                  className="h-9 w-40 px-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="h-9 w-28 sm:w-40 px-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
                   <option value="all">{uiLabels.filters.all[language]}</option>
                   {chapters.map(({ book, chapter }) => (
@@ -166,16 +167,39 @@ const QiratVocabulary = () => {
                 </select>
               </div>
 
-              {/* Center: Word Count */}
-              <span className="text-sm text-gray-500 font-medium">{filteredData.length}</span>
+              {/* Center: Word Count (hidden on mobile, shown on desktop) */}
+              <span className="hidden sm:block text-sm text-gray-500 font-medium">{filteredData.length}</span>
 
-              {/* Right: Language Selector */}
-              <div className="flex rounded-lg overflow-hidden border border-gray-300 h-9">
+              {/* Right: Language Selector (hidden on mobile) */}
+              <div className="hidden sm:flex rounded-lg overflow-hidden border border-gray-300 h-9">
                 {Object.entries(uiLabels.languages).map(([code, name]) => (
                   <button
                     key={code}
                     onClick={() => setLanguage(code)}
                     className={`px-3 text-sm font-medium transition-colors ${
+                      language === code
+                        ? 'bg-teal-500 text-white'
+                        : 'bg-white text-gray-600 hover:bg-gray-50'
+                    }`}
+                    style={code !== 'en' ? { fontFamily: getLanguageFont(code) } : {}}
+                  >
+                    {name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Mobile only: Word Count */}
+              <span className="sm:hidden text-sm text-gray-500 font-medium">{filteredData.length}</span>
+            </div>
+
+            {/* Mobile only: Language Selector Row */}
+            <div className="flex sm:hidden justify-center">
+              <div className="flex rounded-lg overflow-hidden border border-gray-300 h-9">
+                {Object.entries(uiLabels.languages).map(([code, name]) => (
+                  <button
+                    key={code}
+                    onClick={() => setLanguage(code)}
+                    className={`px-4 text-sm font-medium transition-colors ${
                       language === code
                         ? 'bg-teal-500 text-white'
                         : 'bg-white text-gray-600 hover:bg-gray-50'
