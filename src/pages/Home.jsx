@@ -66,6 +66,14 @@ const Home = () => {
       icon: "📖",
       color: "bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700",
       available: true
+    },
+    {
+      title: { ar: "العربية بين يديك", en: "Baina Yadaik B1 P1 Vocabulary" },
+      description: "Vocabulary from Arabiyyah Bayna Yadayk Book 1 Part 1",
+      path: "/yadaik-vocabulary",
+      icon: "📚",
+      color: "bg-blue-500 hover:bg-blue-600 active:bg-blue-700",
+      available: true
     }
   ];
 

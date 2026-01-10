@@ -11,6 +11,7 @@ const AmrConjugation = lazy(() => import('./pages/AmrConjugation'));
 const NahiConjugation = lazy(() => import('./pages/NahiConjugation'));
 const Rhymes = lazy(() => import('./pages/Rhymes'));
 const QiratVocabulary = lazy(() => import('./pages/QiratVocabulary'));
+const YadaikVocabulary = lazy(() => import('./pages/YadaikVocabulary'));
 
 // Loading spinner component
 function LoadingSpinner() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/nahi-conjugation" element={<NahiConjugation />} />
           <Route path="/rhymes" element={<Rhymes />} />
           <Route path="/qirat-vocabulary" element={<QiratVocabulary />} />
+          <Route path="/yadaik-vocabulary" element={<YadaikVocabulary />} />
           <Route path="/syllabus" element={<ComingSoon title="Syllabus" />} />
         </Routes>
       </Suspense>

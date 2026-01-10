@@ -1,8 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import qiratData from '../data/qiratArRashida.json';
+import yadaikData from '../data/yadaik01.json';
 
-const QiratVocabulary = () => {
+const YadaikVocabulary = () => {
   const [language, setLanguage] = useState('bn');
   const [selectedChapter, setSelectedChapter] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -10,7 +10,7 @@ const QiratVocabulary = () => {
   // Extract unique chapters from data
   const chapters = useMemo(() => {
     const chapterMap = new Map();
-    qiratData.forEach(item => {
+    yadaikData.forEach(item => {
       if (!chapterMap.has(item.book)) {
         chapterMap.set(item.book, item.chapter);
       }
@@ -23,7 +23,7 @@ const QiratVocabulary = () => {
 
   // Filter data based on selections
   const filteredData = useMemo(() => {
-    return qiratData.filter(item => {
+    return yadaikData.filter(item => {
       const chapterMatch = selectedChapter === 'all' || item.book === selectedChapter;
       const typeMatch = selectedType === 'all' || item.type === selectedType;
       return chapterMatch && typeMatch;
@@ -37,7 +37,7 @@ const QiratVocabulary = () => {
 
   // UI Labels
   const uiLabels = {
-    title: { ar: 'مفردات قراءة الراشدة', en: 'Qirat ar Rashida Vocabulary' },
+    title: { ar: 'العربية بين يديك', en: 'Arabiyyah Bayna Yadayk B1 P1' },
     selectLanguage: 'Translation',
     languages: { bn: 'বাংলা', en: 'English', ur: 'اردو' },
     filters: {
@@ -118,14 +118,14 @@ const QiratVocabulary = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Fixed Top Bars */}
       <div className="sticky top-0 z-50 bg-white">
         {/* Header */}
         <div className="max-w-4xl mx-auto px-3 py-3 flex items-center gap-3">
           <Link
             to="/"
-            className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-teal-600 hover:bg-gray-100 rounded-lg transition-colors"
+            className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-blue-600 hover:bg-gray-100 rounded-lg transition-colors"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
@@ -133,7 +133,7 @@ const QiratVocabulary = () => {
           </Link>
           <div className="flex-1 text-center">
             <h1 className="arabic-text text-xl sm:text-2xl font-bold text-gray-800" style={{ fontFamily: 'var(--font-arabic)' }}>
-              {uiLabels.title.ar}
+              العربية بين يديك
             </h1>
             <p className="text-sm text-gray-500">{uiLabels.title.en}</p>
           </div>
@@ -149,7 +149,7 @@ const QiratVocabulary = () => {
                 <select
                   value={selectedChapter}
                   onChange={(e) => setSelectedChapter(e.target.value)}
-                  className="h-8 sm:h-9 w-24 sm:w-40 px-1 sm:px-2 border border-gray-300 rounded-lg text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="h-8 sm:h-9 w-24 sm:w-40 px-1 sm:px-2 border border-gray-300 rounded-lg text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">{uiLabels.filters.all[language]}</option>
                   {chapters.map(({ book, chapter }) => (
@@ -162,7 +162,7 @@ const QiratVocabulary = () => {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="h-8 sm:h-9 px-1 sm:px-2 border border-gray-300 rounded-lg text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  className="h-8 sm:h-9 px-1 sm:px-2 border border-gray-300 rounded-lg text-xs sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="all">{uiLabels.filters.all[language]}</option>
                   <option value="word">{uiLabels.types.word[language]}</option>
@@ -182,7 +182,7 @@ const QiratVocabulary = () => {
                     onClick={() => setLanguage(code)}
                     className={`px-2 sm:px-3 text-xs sm:text-sm font-medium transition-colors ${
                       language === code
-                        ? 'bg-teal-500 text-white'
+                        ? 'bg-blue-500 text-white'
                         : 'bg-white text-gray-600 hover:bg-gray-50'
                     }`}
                     style={code !== 'en' ? { fontFamily: getLanguageFont(code) } : {}}
@@ -306,4 +306,4 @@ const VerbCard = ({ item, colors, meaning, language, getLanguageFont, isRtl }) =
   );
 };
 
-export default QiratVocabulary;
+export default YadaikVocabulary;
