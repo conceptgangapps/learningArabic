@@ -35,9 +35,13 @@ const Rhymes = () => {
       <header className="bg-white shadow-sm border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-4 sm:py-6">
           <div className="flex justify-between items-center">
-            <Link to="/" className="text-gray-600 hover:text-gray-800 flex items-center gap-2">
-              <span>&larr;</span>
-              <span>{uiLabels.home}</span>
+            <Link
+              to="/"
+              className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-rose-600 hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+              </svg>
             </Link>
 
             {/* Language Selector */}

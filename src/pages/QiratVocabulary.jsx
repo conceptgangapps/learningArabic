@@ -114,15 +114,16 @@ const QiratVocabulary = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50">
-      {/* Header */}
-      <div className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      {/* Fixed Top Bars */}
+      <div className="sticky top-0 z-50 bg-white">
+        {/* Header */}
         <div className="max-w-4xl mx-auto px-3 py-3 flex items-center gap-3">
           <Link
             to="/"
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-teal-600 hover:bg-gray-100 rounded-lg transition-colors"
           >
-            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
             </svg>
           </Link>
           <div className="flex-1 text-center">
@@ -133,70 +134,59 @@ const QiratVocabulary = () => {
           </div>
           <div className="w-10"></div>
         </div>
-      </div>
 
-      {/* Filters Section */}
-      <div className="bg-white border-b border-gray-100 shadow-sm">
-        <div className="max-w-4xl mx-auto px-3 py-3 space-y-3">
-          {/* Language Selector */}
-          <div className="flex items-center justify-between flex-wrap gap-2">
-            <span className="text-sm text-gray-600 font-medium">{uiLabels.selectLanguage}:</span>
-            <div className="flex rounded-lg overflow-hidden border border-gray-200">
-              {Object.entries(uiLabels.languages).map(([code, name]) => (
-                <button
-                  key={code}
-                  onClick={() => setLanguage(code)}
-                  className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-                    language === code
-                      ? 'bg-teal-500 text-white'
-                      : 'bg-white text-gray-600 hover:bg-gray-50'
-                  }`}
-                  style={code !== 'en' ? { fontFamily: getLanguageFont(code) } : {}}
+        {/* Filters Section */}
+        <div className="border-b border-gray-200">
+          <div className="max-w-4xl mx-auto px-3 py-2">
+            <div className="flex items-center justify-between gap-2">
+              {/* Left: Filters */}
+              <div className="flex items-center gap-2">
+                <select
+                  value={selectedChapter}
+                  onChange={(e) => setSelectedChapter(e.target.value)}
+                  className="h-9 w-40 px-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 >
-                  {name}
-                </button>
-              ))}
-            </div>
-          </div>
+                  <option value="all">{uiLabels.filters.all[language]}</option>
+                  {chapters.map(({ book, chapter }) => (
+                    <option key={book} value={book}>
+                      {chapter}
+                    </option>
+                  ))}
+                </select>
 
-          {/* Chapter & Type Filters */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            {/* Chapter Filter */}
-            <div className="flex-1">
-              <label className="block text-xs text-gray-500 mb-1">{uiLabels.filters.chapter[language]}</label>
-              <select
-                value={selectedChapter}
-                onChange={(e) => setSelectedChapter(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-              >
-                <option value="all">{uiLabels.filters.all[language]}</option>
-                {chapters.map(({ book, chapter }) => (
-                  <option key={book} value={book}>
-                    {chapter}
-                  </option>
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="h-9 px-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                >
+                  <option value="all">{uiLabels.filters.all[language]}</option>
+                  <option value="word">{uiLabels.types.word[language]}</option>
+                  <option value="harf">{uiLabels.types.harf[language]}</option>
+                  <option value="tasreef">{uiLabels.types.tasreef[language]}</option>
+                </select>
+              </div>
+
+              {/* Center: Word Count */}
+              <span className="text-sm text-gray-500 font-medium">{filteredData.length}</span>
+
+              {/* Right: Language Selector */}
+              <div className="flex rounded-lg overflow-hidden border border-gray-300 h-9">
+                {Object.entries(uiLabels.languages).map(([code, name]) => (
+                  <button
+                    key={code}
+                    onClick={() => setLanguage(code)}
+                    className={`px-3 text-sm font-medium transition-colors ${
+                      language === code
+                        ? 'bg-teal-500 text-white'
+                        : 'bg-white text-gray-600 hover:bg-gray-50'
+                    }`}
+                    style={code !== 'en' ? { fontFamily: getLanguageFont(code) } : {}}
+                  >
+                    {name}
+                  </button>
                 ))}
-              </select>
+              </div>
             </div>
-
-            {/* Type Filter */}
-            <div className="sm:w-48">
-              <label className="block text-xs text-gray-500 mb-1">{uiLabels.filters.type[language]}</label>
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-              >
-                <option value="all">{uiLabels.filters.all[language]}</option>
-                <option value="word">{uiLabels.types.word[language]}</option>
-                <option value="harf">{uiLabels.types.harf[language]}</option>
-                <option value="tasreef">{uiLabels.types.tasreef[language]}</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Results Count */}
-          <div className="text-xs text-gray-500">
-            {filteredData.length} {uiLabels.results[language]}
           </div>
         </div>
       </div>
@@ -208,9 +198,9 @@ const QiratVocabulary = () => {
             const colors = getTypeColor(item.type);
 
             if (item.type === 'tasreef') {
-              return <VerbCard key={index} item={item} colors={colors} labels={uiLabels} meaning={getMeaning(item)} language={language} getLanguageFont={getLanguageFont} isRtl={isRtl} />;
+              return <VerbCard key={index} item={item} colors={colors} meaning={getMeaning(item)} language={language} getLanguageFont={getLanguageFont} isRtl={isRtl} />;
             } else {
-              return <WordCard key={index} item={item} colors={colors} labels={uiLabels} meaning={getMeaning(item)} language={language} getLanguageFont={getLanguageFont} isRtl={isRtl} />;
+              return <WordCard key={index} item={item} colors={colors} meaning={getMeaning(item)} language={language} getLanguageFont={getLanguageFont} isRtl={isRtl} />;
             }
           })}
         </div>
@@ -237,111 +227,76 @@ const QiratVocabulary = () => {
 };
 
 // Word Card Component (for word and harf types)
-const WordCard = ({ item, colors, labels, meaning, language, getLanguageFont, isRtl }) => {
+const WordCard = ({ item, colors, meaning, language, getLanguageFont, isRtl }) => {
   const hasMujakkar = item.male_singular || item.male_dual || item.male_plural;
   const hasMuannas = item.female_singular || item.female_dual || item.female_plural;
 
-  const renderForms = (forms) => {
-    const validForms = forms.filter(f => f);
-    return validForms.map((form, idx) => (
-      <span key={idx}>
-        {form}
-        {idx < validForms.length - 1 && <span className="text-gray-300 mx-1">•</span>}
-      </span>
-    ));
-  };
-
   return (
-    <div className="bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-      <div className="flex">
-        {/* Left color bar */}
-        <div className={`w-1 ${colors.badge}`}></div>
-
-        <div className="flex-1 p-3">
-          {/* Arabic forms first */}
-          <div className="arabic-text text-right space-y-1 mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>
-            {/* Mujakkar */}
-            {hasMujakkar && (
-              <div className="flex items-center gap-2 flex-row-reverse">
-                <span className={`text-[10px] ${colors.light} w-10 text-left`}>مذكر</span>
-                <span className="text-xl text-gray-800 flex-1 text-right">
-                  {renderForms([item.male_singular, item.male_dual, item.male_plural])}
-                </span>
-              </div>
-            )}
-
-            {/* Muannas */}
-            {hasMuannas && (
-              <div className="flex items-center gap-2 flex-row-reverse">
-                <span className={`text-[10px] ${colors.light} w-10 text-left`}>مؤنث</span>
-                <span className="text-xl text-gray-800 flex-1 text-right">
-                  {renderForms([item.female_singular, item.female_dual, item.female_plural])}
-                </span>
-              </div>
-            )}
+    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+      {/* Arabic Forms */}
+      <div className="arabic-text space-y-2" style={{ fontFamily: 'var(--font-arabic)' }}>
+        {/* Mujakkar row */}
+        {hasMujakkar && (
+          <div className="flex items-center gap-3">
+            <span className={`${colors.badge} text-white text-xs px-2 py-0.5 rounded`}>مذ</span>
+            <div className="flex-1 text-right text-2xl text-gray-800">
+              {[item.male_singular, item.male_dual, item.male_plural].filter(Boolean).join(' ، ')}
+            </div>
           </div>
+        )}
 
-          {/* Meaning below */}
-          <div
-            className={`${colors.text} text-sm`}
-            style={{
-              fontFamily: getLanguageFont(language),
-              direction: isRtl ? 'rtl' : 'ltr'
-            }}
-          >
-            {meaning || '-'}
+        {/* Muannas row */}
+        {hasMuannas && (
+          <div className="flex items-center gap-3">
+            <span className={`${colors.badge} text-white text-xs px-2 py-0.5 rounded`}>مؤ</span>
+            <div className="flex-1 text-right text-2xl text-gray-800">
+              {[item.female_singular, item.female_dual, item.female_plural].filter(Boolean).join(' ، ')}
+            </div>
           </div>
-        </div>
+        )}
       </div>
+
+      {/* Meaning */}
+      {meaning && (
+        <div
+          className={`${colors.text} text-base mt-3 pt-3 border-t border-gray-100`}
+          style={{ fontFamily: getLanguageFont(language), direction: isRtl ? 'rtl' : 'ltr' }}
+        >
+          {meaning}
+        </div>
+      )}
     </div>
   );
 };
 
 // Verb Card Component (for tasreef type)
-const VerbCard = ({ item, colors, labels, meaning, language, getLanguageFont, isRtl }) => {
+const VerbCard = ({ item, colors, meaning, language, getLanguageFont, isRtl }) => {
   return (
-    <div className="bg-white rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-      <div className="flex">
-        {/* Left color bar */}
-        <div className={`w-1 ${colors.badge}`}></div>
-
-        <div className="flex-1 p-3">
-          {/* Verb Conjugations - inline - Arabic first */}
-          <div className="arabic-text text-xl text-gray-800 text-right mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>
-            {[item.past, item.present, item.masdar, item.imperative, item.prohibition].filter(Boolean).map((form, idx, arr) => (
-              <span key={idx}>
-                {form}
-                {idx < arr.length - 1 && <span className="text-gray-300 mx-1">•</span>}
-              </span>
-            ))}
-          </div>
-
-          {/* Root & Form row */}
-          <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
-            {item.root && (
-              <span className="arabic-text" style={{ fontFamily: 'var(--font-arabic)' }}>
-                <span className={colors.light}>مادہ:</span> {item.root}
-              </span>
-            )}
-            {item.form && (
-              <span>
-                <span className={colors.light}>باب:</span> {item.form}
-              </span>
-            )}
-          </div>
-
-          {/* Meaning below */}
-          <div
-            className={`${colors.text} text-sm`}
-            style={{
-              fontFamily: getLanguageFont(language),
-              direction: isRtl ? 'rtl' : 'ltr'
-            }}
-          >
-            {meaning || '-'}
-          </div>
-        </div>
+    <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+      {/* Conjugations */}
+      <div className="arabic-text text-right text-2xl text-gray-800 leading-relaxed" style={{ fontFamily: 'var(--font-arabic)' }}>
+        {[item.past, item.present, item.masdar, item.imperative, item.prohibition].filter(Boolean).join(' ، ')}
       </div>
+
+      {/* Root & Form */}
+      <div className="flex items-center gap-4 mt-3 arabic-text text-lg text-gray-600" style={{ fontFamily: 'var(--font-arabic)' }}>
+        {item.root && (
+          <span>{item.root}</span>
+        )}
+        {item.form && (
+          <span>{item.form}</span>
+        )}
+      </div>
+
+      {/* Meaning */}
+      {meaning && (
+        <div
+          className={`${colors.text} text-base mt-3 pt-3 border-t border-gray-100`}
+          style={{ fontFamily: getLanguageFont(language), direction: isRtl ? 'rtl' : 'ltr' }}
+        >
+          {meaning}
+        </div>
+      )}
     </div>
   );
 };
